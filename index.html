@@ -1,0 +1,1767 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>하이퍼지앤더블유 | 제로에너지건축물 1등급 창호 하이퍼글라스</title>
+  <meta name="description" content="열관류율 0.875 W/㎡·K — ZEB 1등급 기준 충족. 국토부·LH가 선택한 하이퍼글라스로 냉난방비 절감, 결로 방지, 자외선 차단을 한 번에 해결합니다." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
+  <style>
+    /* ═══════════════════════════════════════════
+       DESIGN SYSTEM — TOKENS
+    ═══════════════════════════════════════════ */
+    :root {
+      /* Color */
+      --c-bg:       #ffffff;
+      --c-bg-alt:   #f4f8f5;
+      --c-bg-dark:  #1a3a2a;
+      --c-bg-deep:  #112718;
+      --c-green-1:  #1a3a2a;   /* darkest */
+      --c-green-2:  #2d6a4f;
+      --c-green-3:  #52b788;   /* accent */
+      --c-green-4:  #b7e4c7;   /* light */
+      --c-green-5:  #f0faf4;   /* tint bg */
+      --c-gold:     #c9a84c;
+      --c-red:      #e53935;
+      --c-red-bg:   #fff5f5;
+      --c-text-1:   #111f14;   /* heading */
+      --c-text-2:   #2c3e2d;   /* body */
+      --c-text-3:   #5a7060;   /* muted */
+      --c-text-inv: #ffffff;
+      --c-border:   #ddeee5;
+      --c-border-2: #c0d8c8;
+
+      /* Typography scale */
+      --fs-xs:   0.72rem;   /* 11.5px — labels, captions */
+      --fs-sm:   0.82rem;   /* 13px — secondary body */
+      --fs-base: 0.94rem;   /* 15px — primary body */
+      --fs-md:   1.1rem;    /* 17.5px — subheading */
+      --fs-lg:   1.35rem;   /* 21.5px — card title */
+      --fs-xl:   1.75rem;   /* 28px — section title sm */
+      --fs-2xl:  2.2rem;    /* 35px — section title */
+      --fs-3xl:  clamp(2rem, 5vw, 3.2rem); /* hero */
+
+      /* Font weight */
+      --fw-light:  300;
+      --fw-reg:    400;
+      --fw-med:    500;
+      --fw-semi:   600;
+      --fw-bold:   700;
+      --fw-black:  900;
+
+      /* Line height */
+      --lh-tight:  1.2;
+      --lh-snug:   1.4;
+      --lh-base:   1.65;
+      --lh-loose:  1.85;
+
+      /* Letter spacing */
+      --ls-tight:  -0.02em;
+      --ls-base:   0em;
+      --ls-wide:   0.06em;
+      --ls-wider:  0.12em;
+
+      /* Spacing */
+      --sp-1: 0.25rem;
+      --sp-2: 0.5rem;
+      --sp-3: 0.75rem;
+      --sp-4: 1rem;
+      --sp-5: 1.25rem;
+      --sp-6: 1.5rem;
+      --sp-8: 2rem;
+      --sp-10: 2.5rem;
+      --sp-12: 3rem;
+      --sp-16: 4rem;
+      --sp-20: 5rem;
+      --sp-24: 6rem;
+
+      /* Radius */
+      --r-sm: 6px;
+      --r-md: 10px;
+      --r-lg: 16px;
+      --r-xl: 24px;
+      --r-pill: 100px;
+
+      /* Shadow */
+      --sh-sm: 0 1px 4px rgba(0,0,0,0.06);
+      --sh-md: 0 4px 16px rgba(0,0,0,0.08);
+      --sh-lg: 0 12px 40px rgba(0,0,0,0.1);
+
+      /* Layout */
+      --container: 1100px;
+      --nav-h: 64px;
+    }
+
+    /* ═══════════════════════════════════════════
+       RESET & BASE
+    ═══════════════════════════════════════════ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body { font-family: 'Noto Sans KR', sans-serif; background: var(--c-bg); color: var(--c-text-2); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; }
+
+    /* ═══════════════════════════════════════════
+       TYPOGRAPHY UTILITIES
+    ═══════════════════════════════════════════ */
+    .label {
+      font-size: var(--fs-xs);
+      font-weight: var(--fw-bold);
+      letter-spacing: var(--ls-wider);
+      text-transform: uppercase;
+      color: var(--c-green-3);
+    }
+    .section-title {
+      font-family: 'Noto Serif KR', serif;
+      font-size: var(--fs-2xl);
+      font-weight: var(--fw-bold);
+      color: var(--c-text-1);
+      line-height: var(--lh-tight);
+      letter-spacing: var(--ls-tight);
+      margin: var(--sp-3) 0 var(--sp-4);
+    }
+    .section-desc {
+      font-size: var(--fs-base);
+      color: var(--c-text-3);
+      line-height: var(--lh-base);
+      max-width: 560px;
+    }
+    .section-head { margin-bottom: var(--sp-12); }
+
+    /* ═══════════════════════════════════════════
+       LAYOUT
+    ═══════════════════════════════════════════ */
+    .container {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 var(--sp-8);
+    }
+    section { padding: var(--sp-24) 0; scroll-margin-top: var(--nav-h); }
+    .bg-alt  { background: var(--c-bg-alt); }
+    .bg-dark { background: var(--c-bg-dark); }
+
+    /* ═══════════════════════════════════════════
+       BUTTONS
+    ═══════════════════════════════════════════ */
+    .btn {
+      display: inline-flex; align-items: center; gap: var(--sp-2);
+      padding: var(--sp-3) var(--sp-6);
+      border-radius: var(--r-pill);
+      font-size: var(--fs-base);
+      font-weight: var(--fw-bold);
+      cursor: pointer; border: none; transition: all 0.2s;
+    }
+    .btn-primary {
+      background: var(--c-green-3);
+      color: var(--c-green-1);
+    }
+    .btn-primary:hover { background: var(--c-green-4); transform: translateY(-1px); }
+    .btn-ghost {
+      border: 1.5px solid rgba(255,255,255,0.35);
+      color: var(--c-text-inv);
+    }
+    .btn-ghost:hover { border-color: var(--c-green-3); background: rgba(82,183,136,0.1); }
+
+    @keyframes glow-pulse {
+      0%,100% { box-shadow: 0 0 0 0 rgba(82,183,136,0.5), 0 6px 24px rgba(82,183,136,0.4); }
+      50%      { box-shadow: 0 0 0 8px rgba(82,183,136,0), 0 10px 32px rgba(82,183,136,0.65); }
+    }
+    /* 화면 하단 고정 CTA 버튼 */
+    .floating-cta {
+      position: fixed;
+      bottom: 28px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 500;
+      display: flex;
+      align-items: center;
+      gap: 0;
+      background: var(--c-green-1);
+      border: 1.5px solid rgba(82,183,136,0.4);
+      border-radius: var(--r-pill);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.35), 0 0 0 0 rgba(82,183,136,0.5);
+      animation: glow-pulse 2.2s ease-in-out infinite;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .floating-cta a {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 0.85rem 1.8rem;
+      font-size: 0.95rem; font-weight: var(--fw-bold);
+      color: var(--c-green-3);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: color 0.2s;
+    }
+    .floating-cta a:hover { color: var(--c-green-4); }
+    .floating-cta .fcta-div {
+      width: 1px; height: 32px;
+      background: rgba(82,183,136,0.25); flex-shrink: 0;
+    }
+    .floating-cta .fcta-sub {
+      padding: 0.85rem 1.8rem;
+      font-size: var(--fs-xs); font-weight: var(--fw-med);
+      color: rgba(255,255,255,0.4);
+    }
+    /* 인라인 버튼은 일반 스타일 유지 */
+    .btn-pulse { border-radius: var(--r-pill) !important; }
+
+    /* ═══════════════════════════════════════════
+       BADGE / PILL
+    ═══════════════════════════════════════════ */
+    .badge {
+      display: inline-flex; align-items: center; gap: var(--sp-2);
+      padding: 0.2rem 0.75rem;
+      border-radius: var(--r-pill);
+      font-size: var(--fs-xs);
+      font-weight: var(--fw-bold);
+    }
+    .badge-ok  { background: #e8f7ef; color: #1a7a45; border: 1px solid #52b788; }
+    .badge-no  { background: var(--c-red-bg); color: var(--c-red); border: 1px solid #ffb3b3; }
+    .badge-gold { background: rgba(201,168,76,0.12); color: #8a6820; border: 1px solid rgba(201,168,76,0.4); }
+
+    /* Problem / Solution boxes */
+    .prob-box {
+      background: rgba(229,57,53,0.05);
+      border-left: 3px solid var(--c-red);
+      padding: var(--sp-4);
+      border-radius: 0 var(--r-sm) var(--r-sm) 0;
+      margin-bottom: var(--sp-4);
+    }
+    .sol-box {
+      background: var(--c-green-5);
+      border-left: 3px solid var(--c-green-3);
+      padding: var(--sp-4);
+      border-radius: 0 var(--r-sm) var(--r-sm) 0;
+    }
+    .box-label {
+      font-size: var(--fs-xs);
+      font-weight: var(--fw-bold);
+      letter-spacing: var(--ls-wide);
+      text-transform: uppercase;
+      margin-bottom: var(--sp-2);
+    }
+    .prob-box .box-label { color: var(--c-red); }
+    .sol-box  .box-label { color: var(--c-green-2); }
+    .prob-box p, .sol-box p { font-size: var(--fs-sm); line-height: var(--lh-base); color: var(--c-text-2); }
+
+    /* ═══════════════════════════════════════════
+       NAV
+    ═══════════════════════════════════════════ */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+      height: var(--nav-h);
+      background: rgba(26,58,42,0.97);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(82,183,136,0.15);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 var(--sp-8);
+    }
+    .nav-logo {
+      font-family: 'Noto Serif KR', serif;
+      font-size: 1.1rem;
+      font-weight: var(--fw-bold);
+      color: var(--c-green-3);
+      letter-spacing: 0.04em;
+    }
+    .nav-links { display: flex; align-items: center; gap: var(--sp-6); list-style: none; }
+    .nav-links a {
+      color: rgba(255,255,255,0.7);
+      font-size: var(--fs-sm);
+      font-weight: var(--fw-med);
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--c-green-3); }
+    .nav-cta {
+      background: var(--c-green-3);
+      color: var(--c-green-1) !important;
+      padding: 0.4rem 1.1rem;
+      border-radius: var(--r-pill);
+      font-weight: var(--fw-bold) !important;
+      transition: background 0.2s !important;
+    }
+    .nav-cta:hover { background: var(--c-green-4) !important; }
+    .nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+    .nav-hamburger span { display: block; width: 22px; height: 2px; background: rgba(255,255,255,0.8); border-radius: 2px; transition: all 0.3s; }
+
+    /* ═══════════════════════════════════════════
+       HERO
+    ═══════════════════════════════════════════ */
+    .hero {
+      min-height: 100vh;
+      background: var(--c-bg-dark);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      padding-top: var(--nav-h);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 70% 60% at 70% 50%, rgba(82,183,136,0.1) 0%, transparent 65%),
+        radial-gradient(ellipse 45% 45% at 15% 80%, rgba(45,106,79,0.12) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    /* subtle grid */
+    .hero::after {
+      content: '';
+      position: absolute; inset: 0;
+      background-image: linear-gradient(rgba(82,183,136,0.03) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(82,183,136,0.03) 1px, transparent 1px);
+      background-size: 48px 48px;
+      pointer-events: none;
+    }
+    .hero-content {
+      padding: var(--sp-16) var(--sp-16) var(--sp-16) clamp(var(--sp-8), 6vw, 5rem);
+      position: relative; z-index: 2;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: var(--sp-2);
+      background: rgba(82,183,136,0.12);
+      border: 1px solid rgba(82,183,136,0.35);
+      border-radius: var(--r-pill);
+      padding: 0.3rem 0.9rem;
+      color: var(--c-green-3);
+      font-size: var(--fs-xs);
+      font-weight: var(--fw-bold);
+      letter-spacing: var(--ls-wide);
+      text-transform: uppercase;
+      margin-bottom: var(--sp-5);
+    }
+    .hero-badge::before { content: '●'; font-size: 0.45rem; opacity: 0.7; }
+    .hero-pre {
+      font-size: var(--fs-sm);
+      color: var(--c-green-3);
+      font-weight: var(--fw-semi);
+      letter-spacing: var(--ls-wider);
+      text-transform: uppercase;
+      margin-bottom: var(--sp-3);
+    }
+    .hero h1 {
+      font-family: 'Noto Serif KR', serif;
+      font-size: var(--fs-3xl);
+      font-weight: var(--fw-bold);
+      color: var(--c-text-inv);
+      line-height: var(--lh-tight);
+      letter-spacing: var(--ls-tight);
+      margin-bottom: var(--sp-5);
+    }
+    .hero h1 em { font-style: normal; color: var(--c-green-3); }
+    .hero-sub {
+      font-size: var(--fs-base);
+      color: rgba(255,255,255,0.65);
+      line-height: var(--lh-loose);
+      margin-bottom: var(--sp-8);
+      max-width: 420px;
+    }
+    .hero-sub strong { color: rgba(255,255,255,0.9); }
+    .hero-stats {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: var(--sp-3); margin-bottom: var(--sp-8);
+    }
+    .hero-stat {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(82,183,136,0.18);
+      border-radius: var(--r-md);
+      padding: var(--sp-4);
+      text-align: center;
+    }
+    .hero-stat .val {
+      font-family: 'Noto Serif KR', serif;
+      font-size: 1.6rem;
+      color: var(--c-green-3);
+      display: block;
+      line-height: 1;
+      margin-bottom: var(--sp-2);
+    }
+    .hero-stat .desc {
+      font-size: var(--fs-xs);
+      color: rgba(255,255,255,0.5);
+      line-height: var(--lh-snug);
+    }
+    .hero-btns { display: flex; gap: var(--sp-4); flex-wrap: wrap; align-items: center; }
+    .hero-image {
+      position: relative; height: 100%; min-height: 600px; overflow: hidden;
+      z-index: 1;
+    }
+    .hero-image img { width: 100%; height: 100%; object-fit: cover; opacity: 0.65; }
+    .hero-image::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(to right, var(--c-bg-dark) 0%, transparent 45%);
+    }
+
+    /* ═══════════════════════════════════════════
+       MARQUEE
+    ═══════════════════════════════════════════ */
+    .marquee-row {
+      background: var(--c-bg-deep);
+      padding: var(--sp-4) 0;
+      overflow: hidden;
+      border-top: 1px solid rgba(82,183,136,0.1);
+      border-bottom: 1px solid rgba(82,183,136,0.1);
+    }
+    .marquee-inner {
+      display: flex; gap: var(--sp-8);
+      animation: marquee 28s linear infinite;
+      white-space: nowrap;
+    }
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+    .marquee-item {
+      display: inline-flex; align-items: center; gap: var(--sp-2);
+      font-size: var(--fs-sm);
+      font-weight: var(--fw-med);
+      color: rgba(255,255,255,0.65);
+      flex-shrink: 0;
+    }
+    .marquee-item .dot { color: var(--c-green-3); font-size: 0.5rem; }
+
+    /* ═══════════════════════════════════════════
+       INSTALLATION SECTION
+    ═══════════════════════════════════════════ */
+    #install { background: var(--c-bg); }
+
+    /* Text card comparison */
+    .install-compare-wrap {
+      display: grid; grid-template-columns: 1fr auto 1fr;
+      gap: var(--sp-5); align-items: start;
+      margin-bottom: var(--sp-6);
+    }
+    .install-compare-card {
+      border-radius: var(--r-lg);
+      overflow: hidden;
+    }
+    .bad-card  { border: 1.5px solid #ffd0d0; }
+    .good-card { border: 1.5px solid var(--c-border); }
+    .install-compare-header {
+      padding: var(--sp-5) var(--sp-6);
+      display: flex; align-items: center; gap: var(--sp-4);
+    }
+    .install-compare-header.bad  { background: var(--c-red-bg); }
+    .install-compare-header.good { background: var(--c-green-5); }
+    .compare-icon { font-size: 1.5rem; font-weight: var(--fw-bold); flex-shrink: 0; }
+    .install-compare-header.bad  .compare-icon { color: var(--c-red); }
+    .install-compare-header.good .compare-icon { color: var(--c-green-2); }
+    .compare-tag {
+      font-size: var(--fs-xs); font-weight: var(--fw-bold);
+      letter-spacing: var(--ls-wider); text-transform: uppercase; margin-bottom: 2px;
+    }
+    .install-compare-header.bad  .compare-tag { color: var(--c-red); }
+    .install-compare-header.good .compare-tag { color: var(--c-green-2); }
+    .compare-title { font-size: var(--fs-lg); font-weight: var(--fw-bold); color: var(--c-text-1); }
+    .compare-list { list-style: none; background: var(--c-bg); padding: var(--sp-3) var(--sp-5); }
+    .compare-list li {
+      display: flex; align-items: flex-start; gap: var(--sp-3);
+      padding: var(--sp-3) 0; border-bottom: 1px solid var(--c-border);
+    }
+    .compare-list li:last-child { border-bottom: none; }
+    .ci-icon { font-size: 1rem; flex-shrink: 0; margin-top: 2px; }
+    .compare-list strong { font-size: var(--fs-sm); font-weight: var(--fw-bold); color: var(--c-text-1); display: block; }
+    .compare-list p { font-size: var(--fs-xs); color: var(--c-text-3); margin-top: 2px; line-height: var(--lh-snug); }
+    .compare-result { padding: var(--sp-4) var(--sp-5); font-size: var(--fs-xs); font-weight: var(--fw-med); line-height: var(--lh-snug); }
+    .bad-result  { background: #fff0f0; color: var(--c-red); }
+    .good-result { background: var(--c-green-5); color: var(--c-green-2); }
+    .compare-arrow { font-size: 2rem; color: var(--c-green-3); padding-top: 6rem; text-align: center; font-weight: var(--fw-bold); }
+    /* 요약 바 */
+    .install-summary-bar {
+      display: flex; align-items: center; gap: var(--sp-4);
+      margin-bottom: var(--sp-8);
+    }
+    .isb-item { flex: 1; padding: var(--sp-4) var(--sp-5); border-radius: var(--r-md); display: flex; align-items: center; gap: var(--sp-3); }
+    .bad-isb  { background: var(--c-red-bg); border: 1px solid #ffd0d0; }
+    .good-isb { background: var(--c-green-5); border: 1px solid var(--c-border); }
+    .isb-label { font-size: var(--fs-xs); font-weight: var(--fw-bold); white-space: nowrap; flex-shrink: 0; }
+    .bad-isb  .isb-label { color: var(--c-red); }
+    .good-isb .isb-label { color: var(--c-green-2); }
+    .isb-val  { font-size: var(--fs-xs); color: var(--c-text-2); }
+    .isb-arrow { font-size: 1.2rem; color: var(--c-green-3); flex-shrink: 0; }
+
+    /* KPI row */
+    .install-kpi-row {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: var(--sp-5); margin-bottom: var(--sp-6);
+    }
+    .install-kpi {
+      border-radius: var(--r-lg);
+      padding: var(--sp-8) var(--sp-6);
+      position: relative; overflow: hidden;
+    }
+    .install-kpi.k-green { background: linear-gradient(135deg, #1a3a2a 0%, #2d6a4f 100%); }
+    .install-kpi.k-teal  { background: linear-gradient(135deg, #153040 0%, #1a5f7a 100%); }
+    .install-kpi-ghost {
+      position: absolute; right: -8px; bottom: -16px;
+      font-family: 'Noto Serif KR', serif;
+      font-size: 7rem; font-weight: 700; line-height: 1;
+      color: rgba(255,255,255,0.04); pointer-events: none;
+    }
+    .install-kpi-num {
+      font-family: 'Noto Serif KR', serif;
+      font-size: 4rem; font-weight: 700; line-height: 1;
+      color: var(--c-green-3); margin-bottom: var(--sp-2);
+    }
+    .install-kpi.k-teal .install-kpi-num { color: #4ecdc4; }
+    .install-kpi-title { font-size: var(--fs-lg); font-weight: var(--fw-bold); color: var(--c-text-inv); margin-bottom: var(--sp-1); }
+    .install-kpi-sub   { font-size: var(--fs-sm); color: rgba(255,255,255,0.45); margin-bottom: var(--sp-4); }
+    .install-kpi-note  {
+      font-size: var(--fs-sm); color: rgba(255,255,255,0.4);
+      line-height: var(--lh-base);
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: var(--sp-3);
+    }
+
+    /* Cost comparison bar */
+    .cost-section {
+      background: var(--c-green-5);
+      border-radius: var(--r-lg);
+      padding: var(--sp-8);
+      text-align: center;
+    }
+    .cost-title {
+      font-family: 'Noto Serif KR', serif;
+      font-size: var(--fs-xl);
+      font-weight: var(--fw-bold);
+      color: var(--c-text-1);
+      margin-bottom: var(--sp-2);
+    }
+    .cost-sub { font-size: var(--fs-sm); color: var(--c-text-3); margin-bottom: var(--sp-8); }
+    .cost-bars { max-width: 540px; margin: 0 auto var(--sp-6); text-align: left; }
+    .cost-bar-group { margin-bottom: var(--sp-5); }
+    .cost-bar-label { font-size: var(--fs-sm); font-weight: var(--fw-med); color: var(--c-text-2); margin-bottom: var(--sp-2); }
+    .cost-bar-track { height: 36px; border-radius: var(--r-sm); overflow: visible; position: relative; }
+    .cost-bar-fill {
+      height: 100%; border-radius: var(--r-sm);
+      display: flex; align-items: center; padding: 0 var(--sp-4);
+      font-size: var(--fs-sm); font-weight: var(--fw-bold); color: #fff;
+      position: relative;
+    }
+    .cost-bar-fill.bad  { background: #e35555; width: 100%; }
+    .cost-bar-fill.good { background: var(--c-green-2); width: 81.5%; }
+    .cost-bar-saving {
+      display: inline-flex; align-items: center; gap: var(--sp-2);
+      font-size: var(--fs-xs); color: var(--c-green-2); font-weight: var(--fw-bold);
+      margin-left: var(--sp-3);
+    }
+    .cost-result {
+      display: inline-flex; align-items: center; gap: var(--sp-3);
+      background: var(--c-green-1);
+      color: var(--c-text-inv);
+      padding: var(--sp-3) var(--sp-8);
+      border-radius: var(--r-pill);
+      font-size: var(--fs-base); font-weight: var(--fw-bold);
+    }
+    .cost-result em { font-style: normal; color: var(--c-green-3); }
+
+    /* Step comparison */
+    .step-compare {
+      background: var(--c-bg);
+      border: 1px solid var(--c-border);
+      border-radius: var(--r-lg);
+      padding: var(--sp-8);
+      margin-top: var(--sp-6);
+    }
+    .step-compare-title {
+      font-family: 'Noto Serif KR', serif;
+      font-size: var(--fs-xl);
+      font-weight: var(--fw-bold);
+      color: var(--c-text-1);
+      text-align: center; margin-bottom: var(--sp-2);
+    }
+    .step-compare-sub { font-size: var(--fs-sm); color: var(--c-text-3); text-align: center; margin-bottom: var(--sp-8); }
+    .step-compare-grid {
+      display: grid; grid-template-columns: 1fr auto 1fr;
+      gap: var(--sp-5); align-items: start;
+    }
+    .step-col-head {
+      padding: var(--sp-3) var(--sp-4);
+      border-radius: var(--r-md);
+      font-size: var(--fs-sm); font-weight: var(--fw-bold);
+      text-align: center; margin-bottom: var(--sp-4);
+    }
+    .step-col-head.bad  { background: var(--c-red-bg); color: var(--c-red); }
+    .step-col-head.good { background: var(--c-green-5); color: var(--c-green-2); }
+    .step-arrow { font-size: 1.5rem; color: var(--c-green-3); padding-top: 3.5rem; text-align: center; }
+    .step-item {
+      display: flex; align-items: center; gap: var(--sp-3);
+      padding: var(--sp-4);
+      border-radius: var(--r-md);
+      margin-bottom: var(--sp-3);
+      border: 1px solid var(--c-border);
+    }
+    .step-item.bad  { background: #fffafa; }
+    .step-item.good { background: var(--c-green-5); border-color: var(--c-border); }
+    .step-num {
+      width: 28px; height: 28px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: var(--fs-xs); font-weight: var(--fw-bold);
+      flex-shrink: 0;
+    }
+    .step-num.bad  { background: #ffe0e0; color: var(--c-red); }
+    .step-num.good { background: #c8ecd8; color: var(--c-green-2); }
+    .step-text h5  { font-size: var(--fs-sm); font-weight: var(--fw-bold); color: var(--c-text-1); }
+    .step-text p   { font-size: var(--fs-xs); color: var(--c-text-3); line-height: var(--lh-snug); margin-top: 2px; }
+
+    /* ═══════════════════════════════════════════
+       BENEFITS (3 cards)
+    ═══════════════════════════════════════════ */
+    #appeal { background: var(--c-bg-alt); }
+    .benefits-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: var(--sp-6);
+    }
+    .benefit-card {
+      background: var(--c-bg);
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      border: 1px solid var(--c-border);
+      box-shadow: var(--sh-sm);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .benefit-card:hover { transform: translateY(-4px); box-shadow: var(--sh-md); }
+    .benefit-card-head {
+      background: var(--c-green-1);
+      padding: var(--sp-6);
+      display: flex; align-items: flex-start; gap: var(--sp-4);
+    }
+    .benefit-num {
+      font-family: 'Noto Serif KR', serif;
+      font-size: 2.8rem; font-weight: var(--fw-bold);
+      color: rgba(82,183,136,0.25); line-height: 1; flex-shrink: 0;
+    }
+    .benefit-tag { font-size: var(--fs-xs); font-weight: var(--fw-bold); letter-spacing: var(--ls-wider); text-transform: uppercase; color: var(--c-green-3); margin-bottom: var(--sp-1); }
+    .benefit-title { font-size: var(--fs-md); font-weight: var(--fw-bold); color: var(--c-text-inv); }
+    .benefit-body { padding: var(--sp-6); }
+
+    /* Chart */
+    .chart-row { margin-bottom: var(--sp-3); }
+    .chart-labels { display: flex; justify-content: space-between; font-size: var(--fs-xs); margin-bottom: 4px; }
+    .chart-labels .name { font-weight: var(--fw-semi); color: var(--c-text-2); }
+    .chart-labels .val  { color: var(--c-text-3); }
+    .bar-track { background: var(--c-border); border-radius: var(--r-sm); height: 7px; overflow: hidden; }
+    .bar-fill  { height: 100%; border-radius: var(--r-sm); background: var(--c-green-2); }
+    .bar-fill.hi { background: var(--c-green-3); }
+
+    /* KPI pair */
+    .kpi-pair { display: flex; gap: var(--sp-3); margin-top: var(--sp-5); }
+    .kpi {
+      flex: 1; background: var(--c-green-1);
+      border-radius: var(--r-md); padding: var(--sp-4); text-align: center;
+    }
+    .kpi-val {
+      font-family: 'Noto Serif KR', serif;
+      font-size: 1.8rem; font-weight: var(--fw-bold); color: var(--c-green-3); line-height: 1;
+    }
+    .kpi-label { font-size: var(--fs-xs); color: rgba(255,255,255,0.45); margin-top: var(--sp-2); }
+
+    /* UV layer visual */
+    .uv-visual {
+      background: var(--c-green-1); border-radius: var(--r-md);
+      padding: var(--sp-5); text-align: center; margin-bottom: var(--sp-4);
+    }
+    .uv-layers {
+      display: flex; justify-content: center; gap: var(--sp-2);
+      align-items: stretch; height: 72px; margin-bottom: var(--sp-3);
+    }
+    .uv-layer {
+      border-radius: var(--r-sm);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.6rem; font-weight: var(--fw-bold);
+      color: rgba(255,255,255,0.75); writing-mode: vertical-rl; letter-spacing: 0.05em;
+    }
+    .uv-glass { background: rgba(82,183,136,0.3); width: 28px; }
+    .uv-film  { background: var(--c-green-3); width: 16px; color: #fff; }
+    .uv-caption { font-size: var(--fs-xs); color: rgba(255,255,255,0.45); }
+
+    /* ═══════════════════════════════════════════
+       SPEC TABLE
+    ═══════════════════════════════════════════ */
+    #spec { background: var(--c-bg); }
+    .spec-wrap { overflow-x: auto; border-radius: var(--r-lg); border: 1px solid var(--c-border); box-shadow: var(--sh-sm); }
+    table { width: 100%; border-collapse: collapse; font-size: var(--fs-sm); }
+    th {
+      background: var(--c-green-1); color: #fff;
+      padding: var(--sp-4) var(--sp-5);
+      text-align: center; font-weight: var(--fw-semi);
+      font-size: var(--fs-sm);
+    }
+    th:first-child { text-align: left; }
+    td {
+      padding: var(--sp-4) var(--sp-5);
+      border-bottom: 1px solid var(--c-border);
+      text-align: center; vertical-align: middle;
+      font-size: var(--fs-sm);
+    }
+    td:first-child { text-align: left; font-weight: var(--fw-semi); color: var(--c-text-1); }
+    tr:nth-child(even) td { background: var(--c-bg-alt); }
+    tr:nth-child(even) td.td-hi { background: rgba(82,183,136,0.1) !important; }
+    .td-hi { background: rgba(82,183,136,0.06) !important; color: var(--c-green-2); font-weight: var(--fw-bold); }
+    .th-hi { background: var(--c-green-3) !important; color: var(--c-green-1) !important; }
+    .note-box {
+      border-radius: var(--r-md); padding: var(--sp-5) var(--sp-6); margin-top: var(--sp-5);
+    }
+    .note-box.warn { background: rgba(229,57,53,0.05); border: 1px solid #ffd0d0; }
+    .note-box.good { background: var(--c-green-5); border: 1px solid var(--c-border); }
+    .note-box h4 { font-size: var(--fs-sm); font-weight: var(--fw-bold); margin-bottom: var(--sp-2); }
+    .note-box.warn h4 { color: var(--c-red); }
+    .note-box.good h4 { color: var(--c-green-2); }
+    .note-box p { font-size: var(--fs-sm); color: var(--c-text-2); line-height: var(--lh-base); }
+
+    /* ═══════════════════════════════════════════
+       CERT
+    ═══════════════════════════════════════════ */
+    #cert { background: var(--c-bg-alt); }
+    .cert-grid {
+      display: grid; grid-template-columns: repeat(3,1fr); gap: var(--sp-5);
+    }
+    .cert-card {
+      background: var(--c-bg); border-radius: var(--r-lg);
+      overflow: hidden; border: 1px solid var(--c-border);
+      box-shadow: var(--sh-sm);
+    }
+    .cert-card img { width: 100%; height: 300px; object-fit: cover; object-position: top; }
+    .cert-info { padding: var(--sp-5); }
+    .cert-info h4 { font-size: var(--fs-base); font-weight: var(--fw-bold); color: var(--c-text-1); margin-bottom: var(--sp-1); }
+    .cert-info p  { font-size: var(--fs-xs); color: var(--c-text-3); }
+
+    /* ═══════════════════════════════════════════
+       GOV
+    ═══════════════════════════════════════════ */
+    #gov { background: var(--c-bg-dark); }
+    #gov .section-title { color: var(--c-text-inv); }
+    #gov .section-desc  { color: rgba(255,255,255,0.55); }
+    .gov-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: var(--sp-5); }
+    .gov-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(82,183,136,0.18);
+      border-radius: var(--r-lg); overflow: hidden;
+    }
+    .gov-card img { width: 100%; height: 260px; object-fit: cover; object-position: top; filter: brightness(0.9); }
+    .gov-info { padding: var(--sp-5); }
+    .gov-info .org {
+      font-size: var(--fs-xs); font-weight: var(--fw-bold);
+      letter-spacing: var(--ls-wide); text-transform: uppercase;
+      color: var(--c-green-3); margin-bottom: var(--sp-2);
+    }
+    .gov-info h4 { font-size: var(--fs-sm); font-weight: var(--fw-bold); color: #fff; line-height: var(--lh-snug); }
+
+    /* ═══════════════════════════════════════════
+       TEAM v2
+    ═══════════════════════════════════════════ */
+    #team { background: var(--c-bg-alt); }
+    .team-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: var(--sp-6);
+    }
+    .team-card-v2 {
+      background: var(--c-bg);
+      border: 1px solid var(--c-border);
+      border-radius: var(--r-xl);
+      overflow: hidden;
+      box-shadow: var(--sh-sm);
+    }
+    .team-card-head-v2 {
+      background: var(--c-green-1);
+      padding: var(--sp-6);
+      display: flex; align-items: center; gap: var(--sp-5);
+    }
+    .team-photo-wrap {
+      flex-shrink: 0;
+      width: 64px; height: 64px;
+      border-radius: 50%;
+      border: 2.5px solid rgba(82,183,136,0.4);
+      overflow: hidden;
+      background: rgba(82,183,136,0.12);
+    }
+    .team-photo-wrap img { width: 100%; height: 100%; object-fit: cover; }
+    .team-photo-placeholder {
+      width: 100%; height: 100%;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Noto Serif KR', serif;
+      font-size: 1.4rem; font-weight: var(--fw-bold);
+      color: var(--c-green-3);
+    }
+    .team-name-v2 {
+      font-size: var(--fs-lg); font-weight: var(--fw-bold);
+      color: var(--c-text-inv); margin-bottom: 4px;
+    }
+    .team-role-v2 {
+      font-size: var(--fs-xs); font-weight: var(--fw-bold);
+      color: var(--c-green-3);
+      letter-spacing: var(--ls-wide);
+      margin-bottom: 4px;
+    }
+    .team-school {
+      font-size: var(--fs-xs); color: rgba(255,255,255,0.4);
+      line-height: var(--lh-snug);
+    }
+    .team-career {
+      list-style: none; padding: var(--sp-6);
+      border-bottom: 1px solid var(--c-border);
+    }
+    .team-career li {
+      font-size: var(--fs-sm); color: var(--c-text-2);
+      line-height: var(--lh-snug);
+      padding: var(--sp-2) 0;
+      display: flex; align-items: flex-start; gap: var(--sp-3);
+    }
+    .team-career li::before {
+      content: '—';
+      color: var(--c-green-3); font-weight: var(--fw-bold);
+      flex-shrink: 0; margin-top: 1px;
+    }
+    .team-badge-row { padding: var(--sp-5) var(--sp-6); }
+    .team-badge {
+      display: inline-flex; align-items: center; gap: var(--sp-2);
+      background: var(--c-green-5);
+      border: 1px solid var(--c-border);
+      border-radius: var(--r-md);
+      padding: var(--sp-2) var(--sp-4);
+      font-size: var(--fs-xs); font-weight: var(--fw-semi);
+      color: var(--c-green-2);
+    }
+
+    /* ═══════════════════════════════════════════
+       CASE
+    ═══════════════════════════════════════════ */
+    #case { background: var(--c-bg); }
+    .case-sub-title {
+      font-size: var(--fs-md); font-weight: var(--fw-bold);
+      color: var(--c-text-1); margin-bottom: var(--sp-4);
+      padding-bottom: var(--sp-3);
+      border-bottom: 2px solid var(--c-border);
+    }
+    .ba-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-4); margin-bottom: var(--sp-10); }
+    .ba-item { border-radius: var(--r-md); overflow: hidden; position: relative; border: 1px solid var(--c-border); }
+    .ba-item img { width: 100%; height: 250px; object-fit: cover; display: block; }
+    .ba-badge {
+      position: absolute; top: var(--sp-3); left: var(--sp-3);
+      padding: 0.2rem 0.7rem; border-radius: var(--r-pill);
+      font-size: var(--fs-xs); font-weight: var(--fw-bold);
+    }
+    .ba-badge.before { background: var(--c-red-bg); color: var(--c-red); }
+    .ba-badge.after  { background: var(--c-green-5); color: var(--c-green-2); }
+    .case-gallery { display: grid; grid-template-columns: repeat(2,1fr); gap: var(--sp-4); margin-bottom: var(--sp-10); }
+    .case-img-wrap { border-radius: var(--r-md); overflow: hidden; position: relative; border: 1px solid var(--c-border); }
+    .case-img-wrap img { width: 100%; height: 240px; object-fit: cover; display: block; }
+    .case-label {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      background: linear-gradient(transparent, rgba(0,0,0,0.65));
+      color: #fff; padding: var(--sp-4);
+      font-size: var(--fs-xs); font-weight: var(--fw-semi);
+    }
+    .ref-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: var(--sp-4); }
+    .ref-card { border-radius: var(--r-md); overflow: hidden; background: var(--c-bg-alt); border: 1px solid var(--c-border); }
+    .ref-card img { width: 100%; height: 160px; object-fit: cover; display: block; }
+    .ref-info { padding: var(--sp-3) var(--sp-4); }
+    .ref-info h5 { font-size: var(--fs-sm); font-weight: var(--fw-bold); color: var(--c-text-1); }
+
+    /* ═══════════════════════════════════════════
+       CTA
+    ═══════════════════════════════════════════ */
+    .cta-section {
+      background: linear-gradient(135deg, var(--c-bg-deep) 0%, var(--c-green-2) 100%);
+      padding: var(--sp-20) 0;
+      text-align: center;
+    }
+    .cta-section h2 {
+      font-family: 'Noto Serif KR', serif;
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      font-weight: var(--fw-bold);
+      color: var(--c-text-inv);
+      margin-bottom: var(--sp-4);
+      line-height: var(--lh-tight);
+    }
+    .cta-section p { color: rgba(255,255,255,0.65); font-size: var(--fs-base); margin-bottom: var(--sp-8); line-height: var(--lh-base); }
+
+    /* ═══════════════════════════════════════════
+       FOOTER
+    ═══════════════════════════════════════════ */
+    footer {
+      background: var(--c-bg-deep);
+      padding: var(--sp-8);
+      text-align: center;
+      color: rgba(255,255,255,0.3);
+      font-size: var(--fs-xs);
+    }
+
+    /* ═══════════════════════════════════════════
+       RESPONSIVE — TABLET (≤900px)
+    ═══════════════════════════════════════════ */
+    @media (max-width: 900px) {
+      :root { --container: 100%; }
+      .container { padding: 0 var(--sp-5); }
+
+      .nav-links { display: none; flex-direction: column; position: absolute; top: var(--nav-h); left: 0; right: 0; background: var(--c-green-1); padding: var(--sp-4) var(--sp-5); gap: var(--sp-4); z-index: 300; border-bottom: 1px solid rgba(82,183,136,0.2); }
+      .nav-links.open { display: flex; }
+      .nav-hamburger { display: flex; }
+
+      .hero { grid-template-columns: 1fr; min-height: auto; }
+      .hero-image { display: none; }
+      .hero-content { padding: var(--sp-10) var(--sp-5) var(--sp-10); }
+      .hero-stats { grid-template-columns: repeat(3,1fr); }
+
+      .install-diagram-wrap { grid-template-columns: 1fr; }
+      .install-compare-wrap { grid-template-columns: 1fr; }
+      .compare-arrow { display: none; }
+      .install-summary-bar { flex-direction: column; }
+      .isb-item { width: 100%; }
+      .install-kpi-row { grid-template-columns: 1fr; }
+      .step-compare-grid { grid-template-columns: 1fr; }
+      .step-arrow { display: none; }
+
+      .benefits-grid { grid-template-columns: 1fr; }
+      .cert-grid { grid-template-columns: 1fr; }
+      .gov-grid  { grid-template-columns: 1fr; }
+      .ba-grid   { grid-template-columns: 1fr; }
+      .case-gallery { grid-template-columns: 1fr; }
+      .ref-grid  { grid-template-columns: 1fr; }
+      .team-grid { grid-template-columns: 1fr; }
+
+      .section-title { font-size: var(--fs-xl); }
+      section { padding: var(--sp-16) 0; }
+    }
+
+    /* ═══════════════════════════════════════════
+       RESPONSIVE — MOBILE (≤600px)
+    ═══════════════════════════════════════════ */
+    @media (max-width: 600px) {
+      .hero-stats { grid-template-columns: 1fr; gap: var(--sp-2); }
+      .kpi-pair { flex-direction: column; }
+      .cost-bars { padding: 0; }
+      .hero-btns { flex-direction: column; }
+      .hero-btns .btn { width: 100%; justify-content: center; }
+      nav { padding: 0 var(--sp-4); }
+      .floating-cta .fcta-sub { display: none; }
+      .floating-cta .fcta-div { display: none; }
+      body { padding-bottom: 80px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav id="main-nav">
+  <a href="#" class="nav-logo">하이퍼지앤더블유</a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#install">시공 이점</a></li>
+    <li><a href="#appeal">핵심 효과</a></li>
+    <li><a href="#spec">성능 비교</a></li>
+    <li><a href="#cert">성능 인증</a></li>
+    <li><a href="#gov">정부 R&D</a></li>
+    <li><a href="#case">시공 사례</a></li>
+    <li><a href="#team">전문가 팀</a></li>
+    <li><a href="https://hipergnw.github.io/introduce/" class="nav-cta">견적 문의</a></li>
+  </ul>
+  <div class="nav-hamburger" id="hamburger" aria-label="메뉴">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">국토부 · LH · 중진공 · 서울연구원 인정 기술력</div>
+    <p class="hero-pre">Zero Energy Building Grade 1</p>
+    <h1>제로에너지건축물<br>기준 <em>1등급 창호</em><br>하이퍼글라스</h1>
+    <p class="hero-sub">
+      열관류율 <strong>0.875 W/㎡·K</strong> — 국가 공인 ZEB 1등급 기준 충족.<br>
+      실내 시공으로 공사기간 30% 단축, 시공비 20% 절감.
+    </p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span class="val">1등급</span>
+        <span class="desc">ZEB 국가 공인<br>열관류율 0.875 W/㎡·K</span>
+      </div>
+      <div class="hero-stat">
+        <span class="val">-30%</span>
+        <span class="desc">공사 기간 단축<br>실내 시공 방식</span>
+      </div>
+      <div class="hero-stat">
+        <span class="val">-20%</span>
+        <span class="desc">시공비 절감<br>기존 창틀 재사용</span>
+      </div>
+    </div>
+    <div class="hero-btns">
+      <a href="https://hipergnw.github.io/introduce/" class="btn btn-primary btn-pulse">이용/견적 문의 →</a>
+      <a href="docs/회사소개서_하이퍼지엔더블유.pdf" class="btn btn-ghost" download>📄 회사소개서 다운로드</a>
+    </div>
+  </div>
+  <div class="hero-image">
+    <img src="images/공사_후_외관.png" alt="하이퍼글라스 시공 후 외관" loading="eager" />
+  </div>
+</section>
+
+<!-- ── MARQUEE ── -->
+<div class="marquee-row">
+  <div class="marquee-inner">
+    <span class="marquee-item"><span class="dot">●</span> ZEB 1등급 기준 충족</span>
+    <span class="marquee-item"><span class="dot">●</span> 공사기간 30% 단축</span>
+    <span class="marquee-item"><span class="dot">●</span> 시공비 20% 절감</span>
+    <span class="marquee-item"><span class="dot">●</span> 난방비 30% 절감</span>
+    <span class="marquee-item"><span class="dot">●</span> 결로 발생 최소화</span>
+    <span class="marquee-item"><span class="dot">●</span> 자외선 99.99% 차단</span>
+    <span class="marquee-item"><span class="dot">●</span> 기존 창틀 재사용</span>
+    <span class="marquee-item"><span class="dot">●</span> 국토부 · LH · 중진공 인정</span>
+    <!-- repeat -->
+    <span class="marquee-item"><span class="dot">●</span> ZEB 1등급 기준 충족</span>
+    <span class="marquee-item"><span class="dot">●</span> 공사기간 30% 단축</span>
+    <span class="marquee-item"><span class="dot">●</span> 시공비 20% 절감</span>
+    <span class="marquee-item"><span class="dot">●</span> 난방비 30% 절감</span>
+    <span class="marquee-item"><span class="dot">●</span> 결로 발생 최소화</span>
+    <span class="marquee-item"><span class="dot">●</span> 자외선 99.99% 차단</span>
+    <span class="marquee-item"><span class="dot">●</span> 기존 창틀 재사용</span>
+    <span class="marquee-item"><span class="dot">●</span> 국토부 · LH · 중진공 인정</span>
+  </div>
+</div>
+
+<!-- ── INSTALLATION SECTION ── -->
+<section id="install">
+  <div class="container">
+    <div class="section-head">
+      <p class="label">Installation Method</p>
+      <h2 class="section-title">기존 창호와 무엇이 다른가요?</h2>
+      <p class="section-desc">딱 하나의 차이에서 모든 장점이 나옵니다 — <strong>"실내에서 설치한다"</strong></p>
+    </div>
+
+    <!-- 텍스트 카드형 시공 비교 -->
+    <div class="install-compare-wrap">
+
+      <!-- 기존 외부 시공 -->
+      <div class="install-compare-card bad-card">
+        <div class="install-compare-header bad">
+          <span class="compare-icon">✕</span>
+          <div>
+            <p class="compare-tag">기존 방식</p>
+            <h3 class="compare-title">외부 시공</h3>
+          </div>
+        </div>
+        <ul class="compare-list">
+          <li class="bad-item">
+            <span class="ci-icon">🏗️</span>
+            <div><strong>외부 시공 — 크레인·곤돌라 필수</strong><p>고가 장비 임차 비용 발생, 날씨 영향 받음</p></div>
+          </li>
+          <li class="bad-item">
+            <span class="ci-icon">🏚️</span>
+            <div><strong>창틀 새로 설치 필요</strong><p>기존 창틀 교체 불가 → 공사비 2~3배 증가</p></div>
+          </li>
+          <li class="bad-item">
+            <span class="ci-icon">⚠️</span>
+            <div><strong>180 kg — 매우 무거워 사고 위험 높음</strong><p>유리 1장(2×2m) = 180 kg · 낙하·압착 위험</p></div>
+          </li>
+          <li class="bad-item">
+            <span class="ci-icon">👷</span>
+            <div><strong>작업자 3명 필요</strong><p>장비당 2인 한계로 공사 기간 100% 기준</p></div>
+          </li>
+          <li class="bad-item">
+            <span class="ci-icon">🔧</span>
+            <div><strong>외부 실리콘 마감</strong><p>10년 주기 보수 필요, 추가 비용 발생</p></div>
+          </li>
+        </ul>
+        <div class="compare-result bad-result">
+          외부 시공 + 창틀 교체 · 180 kg · 사고 위험 · 공사 100%
+        </div>
+      </div>
+
+      <!-- 중앙 화살표 -->
+      <div class="compare-arrow">→</div>
+
+      <!-- 하이퍼글라스 실내 시공 -->
+      <div class="install-compare-card good-card">
+        <div class="install-compare-header good">
+          <span class="compare-icon">✓</span>
+          <div>
+            <p class="compare-tag">하이퍼글라스</p>
+            <h3 class="compare-title">실내 시공</h3>
+          </div>
+        </div>
+        <ul class="compare-list">
+          <li class="good-item">
+            <span class="ci-icon">🏠</span>
+            <div><strong>실내 시공 — 장비 없이 작업</strong><p>별도 장비 불필요, 날씨 영향 없음</p></div>
+          </li>
+          <li class="good-item">
+            <span class="ci-icon">♻️</span>
+            <div><strong>기존 창틀 그대로 재사용</strong><p>창틀 교체 불필요 → 공사비 대폭 절감</p></div>
+          </li>
+          <li class="good-item">
+            <span class="ci-icon">✅</span>
+            <div><strong>120 kg — 가벼워 안전함</strong><p>유리 1장(2×2m) = 120 kg (33% ↓) · 사고 위험 없음</p></div>
+          </li>
+          <li class="good-item">
+            <span class="ci-icon">👥</span>
+            <div><strong>작업자 2명으로 충분</strong><p>동시 다발 실내 시공 → 공사 기간 30% 단축</p></div>
+          </li>
+          <li class="good-item">
+            <span class="ci-icon">🔒</span>
+            <div><strong>가스켓 압착 마감</strong><p>이후 보수작업 불필요</p></div>
+          </li>
+        </ul>
+        <div class="compare-result good-result">
+          실내 시공 + 창틀 재사용 · 120 kg · 안전 · <strong>공사 30% 단축</strong>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 요약 비교 바 -->
+    <div class="install-summary-bar">
+      <div class="isb-item bad-isb">
+        <span class="isb-label">✕ 삼중유리</span>
+        <span class="isb-val">외부 시공 + 창틀 교체 · 180 kg · 사고 위험</span>
+      </div>
+      <div class="isb-arrow">→</div>
+      <div class="isb-item good-isb">
+        <span class="isb-label">✓ 하이퍼글라스</span>
+        <span class="isb-val">실내 시공 + 창틀 재사용 · 120 kg · <strong>공사 30% 단축</strong></span>
+      </div>
+    </div>
+
+    <!-- KPI 카드 -->
+    <div class="install-kpi-row">
+      <div class="install-kpi k-green">
+        <div class="install-kpi-ghost">30</div>
+        <div class="install-kpi-num">30%</div>
+        <div class="install-kpi-title">공사 기간 단축</div>
+        <div class="install-kpi-sub">기존 외부 시공 대비</div>
+        <div class="install-kpi-note">장비 없이 동시 다발 내부 시공 가능 — 비계·외부 장비 설치 공정이 사라집니다.</div>
+      </div>
+      <div class="install-kpi k-teal">
+        <div class="install-kpi-ghost">20</div>
+        <div class="install-kpi-num">20%</div>
+        <div class="install-kpi-title">시공비 절감</div>
+        <div class="install-kpi-sub">기존 커튼월 대비 (10㎡ 기준 915,000원 절감)</div>
+        <div class="install-kpi-note">장비비 제거 + 인력 효율화로 예산을 아낍니다. 창틀 교체 없이 기존 프레임 재사용.</div>
+      </div>
+    </div>
+
+    <!-- 비용 바 차트 -->
+    <div class="cost-section">
+      <div class="cost-title">💰 얼마나 저렴한가요?</div>
+      <div class="cost-sub">유리면적 <strong style="color:var(--c-green-2)">10㎡</strong> 시공 기준 비용 비교 <span style="font-size:var(--fs-xs);color:var(--c-text-3);margin-left:4px;">(공동주택 커튼월 기준)</span></div>
+
+      <!-- 절감액 임팩트 강조 -->
+      <div style="background:var(--c-green-1);border-radius:var(--r-lg);padding:var(--sp-6) var(--sp-8);margin-bottom:var(--sp-6);text-align:center;">
+        <p style="font-size:var(--fs-xs);color:rgba(255,255,255,0.45);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:var(--sp-2);">10㎡당 절감액</p>
+        <p style="font-family:'Noto Serif KR',serif;font-size:3rem;font-weight:700;color:var(--c-green-3);line-height:1;margin-bottom:var(--sp-2);">915,000원<span style="font-size:1rem;color:rgba(255,255,255,0.4);font-family:'Noto Sans KR',sans-serif;font-weight:400;margin-left:8px;">/ 10㎡</span></p>
+        <p style="font-size:var(--fs-sm);color:rgba(255,255,255,0.45);">100㎡ 시공 시 약 <strong style="color:var(--c-green-4);">915만원</strong> · 1,000㎡ 시공 시 약 <strong style="color:var(--c-green-4);">9,150만원</strong> 절감</p>
+      </div>
+
+      <div class="cost-bars">
+        <div class="cost-bar-group">
+          <div class="cost-bar-label" style="display:flex;justify-content:space-between;align-items:center;">
+            <span>기존 커튼월 창호</span>
+            <span style="font-size:var(--fs-xs);color:var(--c-text-3);">10㎡ 기준</span>
+          </div>
+          <div class="cost-bar-track">
+            <div class="cost-bar-fill bad">4,942,000원</div>
+          </div>
+        </div>
+        <div class="cost-bar-group">
+          <div class="cost-bar-label" style="display:flex;justify-content:space-between;align-items:center;">
+            <span>하이퍼글라스 커튼월</span>
+            <span style="font-size:var(--fs-xs);color:var(--c-green-2);font-weight:700;">→ 915,000원 절감</span>
+          </div>
+          <div class="cost-bar-track">
+            <div class="cost-bar-fill good">4,027,000원</div>
+          </div>
+        </div>
+      </div>
+      <div class="cost-result">🎉 동일 성능, 약 <em>20% 비용 절감</em> 실현</div>
+    </div>
+
+    <!-- 설치 단계 비교 -->
+    <div class="step-compare">
+      <div class="step-compare-title">설치 방법 한눈에 비교</div>
+      <div class="step-compare-sub">같은 유리창, 어디서 붙이느냐가 핵심입니다</div>
+      <div class="step-compare-grid">
+        <div>
+          <div class="step-col-head bad">✕ 기존 방식 (외부)</div>
+          <div class="step-item bad">
+            <div class="step-num bad">1</div>
+            <div class="step-text"><h5>건물 밖에서 유리 설치</h5><p>크레인·곤돌라 필요</p></div>
+          </div>
+          <div class="step-item bad">
+            <div class="step-num bad">2</div>
+            <div class="step-text"><h5>외부에서 캡(고정틀) 부착</h5><p>외부 고소 작업 — 사고 위험 존재</p></div>
+          </div>
+          <div class="step-item bad">
+            <div class="step-num bad">3</div>
+            <div class="step-text"><h5>외부 실리콘 마감</h5><p>10년 주기 보수 필요</p></div>
+          </div>
+        </div>
+        <div class="step-arrow">→</div>
+        <div>
+          <div class="step-col-head good">✓ 하이퍼글라스 방식 (내부)</div>
+          <div class="step-item good">
+            <div class="step-num good">1</div>
+            <div class="step-text"><h5>실내에서 유리 설치</h5><p>장비 없이 2인 작업</p></div>
+          </div>
+          <div class="step-item good">
+            <div class="step-num good">2</div>
+            <div class="step-text"><h5>내부에서 프레임 부착</h5><p>안전하고 날씨 영향 없음</p></div>
+          </div>
+          <div class="step-item good">
+            <div class="step-num good">3</div>
+            <div class="step-text"><h5>내부 가스켓 압착 마감</h5><p>이후 보수작업 불필요</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── BENEFITS ── -->
+<section id="appeal" class="bg-alt">
+  <div class="container">
+    <div class="section-head">
+      <p class="label">Core Benefits</p>
+      <h2 class="section-title">하이퍼글라스가 주는<br>3가지 운영 혜택</h2>
+      <p class="section-desc">ZEB 1등급 인증 후 — 냉난방비 절감 · 결로 방지 · 자외선 차단을 동시에 해결합니다.</p>
+    </div>
+    <div class="benefits-grid">
+
+      <!-- 01 에너지 -->
+      <div class="benefit-card">
+        <div class="benefit-card-head">
+          <div class="benefit-num">01</div>
+          <div>
+            <p class="benefit-tag">Energy Saving</p>
+            <h3 class="benefit-title">냉·난방비 절약</h3>
+          </div>
+        </div>
+        <div class="benefit-body">
+          <p style="font-size:var(--fs-xs);color:var(--c-text-3);margin-bottom:var(--sp-4);">열관류율 비교 (W/m²·K) — 낮을수록 우수</p>
+          <div class="chart-row">
+            <div class="chart-labels"><span class="name">외벽</span><span class="val">0.2</span></div>
+            <div class="bar-track"><div class="bar-fill" style="width:14%"></div></div>
+          </div>
+          <div class="chart-row">
+            <div class="chart-labels"><span class="name">복층유리</span><span class="val">1.4+</span></div>
+            <div class="bar-track"><div class="bar-fill" style="width:100%"></div></div>
+          </div>
+          <div class="chart-row">
+            <div class="chart-labels"><span class="name">삼중유리</span><span class="val">0.9</span></div>
+            <div class="bar-track"><div class="bar-fill" style="width:65%"></div></div>
+          </div>
+          <div class="chart-row">
+            <div class="chart-labels"><span class="name">하이퍼글라스</span><span class="val">0.875</span></div>
+            <div class="bar-track"><div class="bar-fill hi" style="width:63%"></div></div>
+          </div>
+          <div class="prob-box" style="margin-top:var(--sp-5);">
+            <p class="box-label">⚠ Problem</p>
+            <p>외벽보다 <strong>6배 이상</strong>의 에너지가 창호를 통해 손실됩니다.</p>
+          </div>
+          <div class="sol-box">
+            <p class="box-label">✓ Solution</p>
+            <p>열관류율 <strong>0.875 W/㎡·K</strong> 로 창호 에너지 손실을 대폭 차단합니다.</p>
+          </div>
+          <div class="kpi-pair">
+            <div class="kpi"><div class="kpi-val">-30%</div><div class="kpi-label">난방비 절감</div></div>
+            <div class="kpi"><div class="kpi-val">-15%</div><div class="kpi-label">냉방비 절감</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 02 결로 -->
+      <div class="benefit-card">
+        <div class="benefit-card-head">
+          <div class="benefit-num">02</div>
+          <div>
+            <p class="benefit-tag">Condensation Free</p>
+            <h3 class="benefit-title">결로 방지</h3>
+          </div>
+        </div>
+        <div class="benefit-body" style="padding:var(--sp-4);">
+          <!-- 결로 발생 원리 SVG -->
+          <div style="background:var(--c-green-1);border-radius:var(--r-md);padding:var(--sp-4);margin-bottom:var(--sp-4);">
+            <p style="font-size:var(--fs-xs);font-weight:var(--fw-bold);color:rgba(255,255,255,0.6);text-align:center;margin-bottom:var(--sp-3);letter-spacing:0.05em;">결로 발생 원리 — 온도차 비교</p>
+            <svg viewBox="0 0 340 165" xmlns="http://www.w3.org/2000/svg" width="100%" style="overflow:visible;">
+              <!-- ── 단일 유리 박스 ── -->
+              <rect x="4" y="4" width="148" height="138" rx="8" fill="none" stroke="#e53935" stroke-width="1.5" stroke-dasharray="4,2"/>
+              <text x="76" y="17" font-size="9" fill="#ff6b6b" font-family="sans-serif" font-weight="bold" text-anchor="middle">단일 유리</text>
+              <!-- 실내 (따뜻) -->
+              <rect x="8" y="22" width="60" height="116" rx="6" fill="rgba(160,70,30,0.45)"/>
+              <text x="38" y="62" font-size="20" text-anchor="middle">🔥</text>
+              <text x="38" y="78" font-size="8" fill="rgba(255,255,255,0.55)" font-family="sans-serif" text-anchor="middle">실내</text>
+              <text x="38" y="118" font-size="15" fill="#ffaa55" font-family="sans-serif" font-weight="bold" text-anchor="middle">22°C</text>
+              <!-- 유리 (단일, 얇게) -->
+              <rect x="70" y="22" width="8" height="116" rx="3" fill="rgba(82,183,136,0.55)" stroke="#52b788" stroke-width="1"/>
+              <!-- 27도 차이 뱃지 — 실내 왼쪽 위 (파란색 겹치지 않도록) -->
+              <rect x="10" y="28" width="55" height="20" rx="10" fill="#e53935"/>
+              <text x="37" y="42" font-size="8.5" fill="white" font-family="sans-serif" font-weight="bold" text-anchor="middle">27도 차이!</text>
+              <!-- 결로 물방울 -->
+              <circle cx="74" cy="52" r="3.5" fill="#90caf9" opacity="0.95"/>
+              <circle cx="74" cy="70" r="3.5" fill="#90caf9" opacity="0.95"/>
+              <circle cx="74" cy="88" r="3.5" fill="#90caf9" opacity="0.95"/>
+              <circle cx="74" cy="106" r="3.5" fill="#90caf9" opacity="0.95"/>
+              <!-- 실외 (차가움) -->
+              <rect x="80" y="22" width="68" height="116" rx="6" fill="rgba(20,50,110,0.55)"/>
+              <text x="114" y="62" font-size="20" text-anchor="middle">❄️</text>
+              <text x="114" y="78" font-size="8" fill="rgba(255,255,255,0.55)" font-family="sans-serif" text-anchor="middle">실외</text>
+              <text x="114" y="118" font-size="15" fill="#90caf9" font-family="sans-serif" font-weight="bold" text-anchor="middle">-5°C</text>
+              <!-- 결로 발생 텍스트 -->
+              <text x="76" y="155" font-size="9.5" fill="#ff6b6b" font-family="sans-serif" font-weight="bold" text-anchor="middle">결로 발생</text>
+
+              <!-- ── 화살표 ── -->
+              <text x="166" y="85" font-size="22" fill="#52b788" text-anchor="middle">→</text>
+
+              <!-- ── 하이퍼글라스 박스 ── -->
+              <rect x="180" y="4" width="156" height="138" rx="8" fill="rgba(82,183,136,0.07)" stroke="#52b788" stroke-width="1.5"/>
+              <text x="258" y="17" font-size="9" fill="#52b788" font-family="sans-serif" font-weight="bold" text-anchor="middle">하이퍼글라스 (공기층 2개)</text>
+              <!-- 실내 -->
+              <rect x="184" y="22" width="36" height="116" rx="6" fill="rgba(160,70,30,0.45)"/>
+              <text x="202" y="62" font-size="16" text-anchor="middle">🔥</text>
+              <text x="202" y="76" font-size="7" fill="rgba(255,255,255,0.55)" font-family="sans-serif" text-anchor="middle">실내</text>
+              <text x="202" y="114" font-size="12" fill="#ffaa55" font-family="sans-serif" font-weight="bold" text-anchor="middle">22°C</text>
+              <!-- 유리1 -->
+              <rect x="222" y="22" width="7" height="116" rx="3" fill="rgba(82,183,136,0.5)" stroke="#52b788" stroke-width="0.8"/>
+              <!-- 공기층1 -->
+              <rect x="231" y="22" width="22" height="116" rx="4" fill="rgba(52,183,136,0.15)" stroke="#52b788" stroke-width="0.6"/>
+              <text x="242" y="62" font-size="7" fill="#52b788" font-family="sans-serif" font-weight="bold" text-anchor="middle">공기층</text>
+              <text x="242" y="76" font-size="10" fill="#b7e4c7" font-family="sans-serif" font-weight="bold" text-anchor="middle">13°C</text>
+              <text x="242" y="88" font-size="6.5" fill="rgba(255,255,255,0.4)" font-family="sans-serif" text-anchor="middle">9도차</text>
+              <!-- 유리2 -->
+              <rect x="255" y="22" width="7" height="116" rx="3" fill="rgba(82,183,136,0.5)" stroke="#52b788" stroke-width="0.8"/>
+              <!-- 공기층2 -->
+              <rect x="264" y="22" width="22" height="116" rx="4" fill="rgba(52,183,136,0.08)" stroke="#52b788" stroke-width="0.6"/>
+              <text x="275" y="62" font-size="7" fill="#52b788" font-family="sans-serif" font-weight="bold" text-anchor="middle">공기층</text>
+              <text x="275" y="76" font-size="10" fill="#b7e4c7" font-family="sans-serif" font-weight="bold" text-anchor="middle">4°C</text>
+              <text x="275" y="88" font-size="6.5" fill="rgba(255,255,255,0.4)" font-family="sans-serif" text-anchor="middle">9도차</text>
+              <!-- 유리3 -->
+              <rect x="288" y="22" width="7" height="116" rx="3" fill="rgba(82,183,136,0.4)" stroke="#52b788" stroke-width="0.8"/>
+              <!-- 실외 -->
+              <rect x="297" y="22" width="36" height="116" rx="6" fill="rgba(20,50,110,0.55)"/>
+              <text x="315" y="62" font-size="16" text-anchor="middle">❄️</text>
+              <text x="315" y="76" font-size="7" fill="rgba(255,255,255,0.55)" font-family="sans-serif" text-anchor="middle">실외</text>
+              <text x="315" y="114" font-size="12" fill="#90caf9" font-family="sans-serif" font-weight="bold" text-anchor="middle">-5°C</text>
+              <!-- 해결 텍스트 -->
+              <text x="258" y="155" font-size="9.5" fill="#52b788" font-family="sans-serif" font-weight="bold" text-anchor="middle">✓ 단계별 완화 — 결로 차단</text>
+            </svg>
+          </div>
+          <div class="prob-box">
+            <p class="box-label">⚠ Problem</p>
+            <p>내·외부 <strong>온도차 27°C</strong>로 유리 표면에 수분이 맺혀 곰팡이·부식의 원인이 됩니다.</p>
+          </div>
+          <div class="sol-box">
+            <p class="box-label">✓ Solution</p>
+            <p>2개의 공기층으로 온도를 단계적으로 완화 — 유리 표면 결로를 구조적으로 차단합니다.</p>
+          </div>
+          <div class="kpi-pair">
+            <div class="kpi"><div class="kpi-val" style="font-size:1.1rem;">결로</div><div class="kpi-label">발생 최소화</div></div>
+            <div class="kpi"><div class="kpi-val" style="font-size:1.1rem;">9°C씩</div><div class="kpi-label">단계별 온도 완화</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 03 자외선 -->
+      <div class="benefit-card">
+        <div class="benefit-card-head">
+          <div class="benefit-num">03</div>
+          <div>
+            <p class="benefit-tag">UV Protection</p>
+            <h3 class="benefit-title">자외선 99.99% 차단</h3>
+          </div>
+        </div>
+        <div class="benefit-body" style="padding:var(--sp-4);">
+          <div style="background:var(--c-green-1);border-radius:var(--r-md);padding:var(--sp-4) var(--sp-4) var(--sp-3);margin-bottom:var(--sp-4);">
+            <p style="font-size:var(--fs-xs);font-weight:var(--fw-bold);color:rgba(255,255,255,0.9);text-align:center;margin-bottom:2px;">하이퍼글라스</p>
+            <p style="font-size:var(--fs-xs);color:rgba(255,255,255,0.45);text-align:center;margin-bottom:var(--sp-4);">자외선 차단 투명 필름 삽입 원리</p>
+            <svg viewBox="0 0 300 175" xmlns="http://www.w3.org/2000/svg" width="100%">
+              <!-- 태양 -->
+              <circle cx="28" cy="88" r="18" fill="#c9a84c" opacity="0.9"/>
+              <circle cx="28" cy="88" r="12" fill="#f4d03f"/>
+              <!-- 태양 광선 -->
+              <line x1="10" y1="88" x2="4"  y2="88" stroke="#f4d03f" stroke-width="2" stroke-linecap="round"/>
+              <line x1="46" y1="88" x2="52" y2="88" stroke="#f4d03f" stroke-width="2" stroke-linecap="round"/>
+              <line x1="28" y1="70" x2="28" y2="64" stroke="#f4d03f" stroke-width="2" stroke-linecap="round"/>
+              <line x1="28" y1="106" x2="28" y2="112" stroke="#f4d03f" stroke-width="2" stroke-linecap="round"/>
+              <line x1="15" y1="75" x2="11" y2="71" stroke="#f4d03f" stroke-width="2" stroke-linecap="round"/>
+              <line x1="41" y1="101" x2="45" y2="105" stroke="#f4d03f" stroke-width="2" stroke-linecap="round"/>
+
+              <!-- 컬럼 라벨 -->
+              <text x="104" y="14" font-size="8.5" fill="rgba(255,255,255,0.55)" font-family="sans-serif" text-anchor="middle">유리</text>
+              <text x="160" y="14" font-size="8.5" fill="#52b788" font-family="sans-serif" font-weight="bold" text-anchor="middle">자외선 차단 필름</text>
+              <text x="218" y="14" font-size="8.5" fill="rgba(255,255,255,0.55)" font-family="sans-serif" text-anchor="middle">유리</text>
+
+              <!-- 유리1 (두께 16px, x=92) -->
+              <rect x="92" y="20" width="16" height="138" rx="3" fill="rgba(82,183,136,0.28)" stroke="rgba(82,183,136,0.5)" stroke-width="1"/>
+              <!-- UV차단 필름 — 얇게 4px (기존 22px → 약 1/6), x=157 -->
+              <rect x="157" y="20" width="4" height="138" rx="2" fill="#52b788"/>
+              <!-- 유리2 (두께 16px, x=210) -->
+              <rect x="210" y="20" width="16" height="138" rx="3" fill="rgba(82,183,136,0.28)" stroke="rgba(82,183,136,0.5)" stroke-width="1"/>
+
+              <!-- 자외선 라벨 -->
+              <text x="72" y="53" font-size="8" fill="#c084fc" font-family="sans-serif" text-anchor="middle">자외선</text>
+
+              <!-- 자외선 점선 → 필름(x=157)까지, 필름 위에서 X -->
+              <line x1="52" y1="58" x2="157" y2="58" stroke="#c084fc" stroke-width="1.5" stroke-dasharray="5,3"/>
+              <text x="165" y="63" font-size="11" fill="#ef4444" font-family="sans-serif" font-weight="bold" text-anchor="middle">✕</text>
+
+              <line x1="52" y1="76" x2="157" y2="76" stroke="#c084fc" stroke-width="1.5" stroke-dasharray="5,3"/>
+              <text x="165" y="81" font-size="11" fill="#ef4444" font-family="sans-serif" font-weight="bold" text-anchor="middle">✕</text>
+
+              <line x1="52" y1="94" x2="157" y2="94" stroke="#c084fc" stroke-width="1.5" stroke-dasharray="5,3"/>
+              <text x="165" y="99" font-size="11" fill="#ef4444" font-family="sans-serif" font-weight="bold" text-anchor="middle">✕</text>
+
+              <line x1="52" y1="112" x2="157" y2="112" stroke="#c084fc" stroke-width="1.5" stroke-dasharray="5,3"/>
+              <text x="165" y="117" font-size="11" fill="#ef4444" font-family="sans-serif" font-weight="bold" text-anchor="middle">✕</text>
+
+              <!-- 가시광선 통과 화살표 -->
+              <line x1="52" y1="148" x2="280" y2="148" stroke="#f4d03f" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrowY)"/>
+              <defs>
+                <marker id="arrowY" markerWidth="7" markerHeight="7" refX="4" refY="3.5" orient="auto">
+                  <path d="M0,0 L7,3.5 L0,7 Z" fill="#f4d03f"/>
+                </marker>
+              </defs>
+              <text x="178" y="163" font-size="8.5" fill="#f4d03f" font-family="sans-serif" text-anchor="middle">가시광선 통과 ✓</text>
+            </svg>
+            <!-- 결과 뱃지 -->
+            <div style="background:rgba(82,183,136,0.12);border:1px solid rgba(82,183,136,0.3);border-radius:var(--r-md);padding:var(--sp-3) var(--sp-4);margin-top:var(--sp-3);text-align:center;">
+              <p style="font-size:var(--fs-sm);font-weight:var(--fw-bold);color:var(--c-green-3);">✓ 자외선 99.99% 차단</p>
+              <p style="font-size:var(--fs-xs);color:rgba(255,255,255,0.4);margin-top:2px;">채광 유지 · 가구·바닥재 변색 방지 · 건강 보호</p>
+            </div>
+          </div>
+          <div class="prob-box">
+            <p class="box-label">⚠ Problem</p>
+            <p>일반 유리의 자외선 차단율은 40~60%에 불과합니다.</p>
+          </div>
+          <div class="sol-box">
+            <p class="box-label">✓ Solution</p>
+            <p><strong>투명한 특수 필름</strong>을 삽입 — 채광은 그대로, 자외선만 99.99% 차단.</p>
+          </div>
+          <div class="kpi-pair">
+            <div class="kpi"><div class="kpi-val">99.99%</div><div class="kpi-label">UV 차단율</div></div>
+            <div class="kpi"><div class="kpi-val" style="font-size:1rem;">채광<br>유지</div><div class="kpi-label">가시광선 통과</div></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── SPEC TABLE ── -->
+<section id="spec">
+  <div class="container">
+    <div class="section-head">
+      <p class="label">Performance Data</p>
+      <h2 class="section-title">유리 종류별 성능 비교</h2>
+      <p class="section-desc">공인 시험성적서 기준 — 더 알고 싶은 분들을 위한 데이터</p>
+    </div>
+    <div class="spec-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>비교 항목</th>
+            <th>복층유리<br><small style="font-weight:400;opacity:.7">일반 이중</small></th>
+            <th>삼중유리<br><small style="font-weight:400;opacity:.7">Triple Glazing</small></th>
+            <th class="th-hi">하이퍼글라스<br><small style="font-weight:400;">ZEB 1등급</small></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>열관류율<br><small style="color:var(--c-text-3)">낮을수록 우수</small></td>
+            <td>1.4~1.8 W/㎡·K<br><span class="badge badge-no">❌ ZEB 미달</span></td>
+            <td>0.8~1.2 W/㎡·K</td>
+            <td class="td-hi">0.875 W/㎡·K<br><span class="badge badge-ok">✓ ZEB 1등급</span></td>
+          </tr>
+          <tr>
+            <td>4㎡ 기준 무게<br><small style="color:var(--c-text-3)">시공·안전 직결</small></td>
+            <td>약 120 kg</td>
+            <td>약 180 kg<br><span class="badge badge-no">⚠ 힌지 변형 위험</span></td>
+            <td class="td-hi">약 120 kg<br><span class="badge badge-ok">✓ 기존 힌지 재사용</span></td>
+          </tr>
+          <tr>
+            <td>시공 안전성</td>
+            <td><span class="badge badge-ok">✓ 안전</span></td>
+            <td>고중량 낙하·압착 위험↑</td>
+            <td class="td-hi"><span class="badge badge-ok">✓ 복층유리 수준</span></td>
+          </tr>
+          <tr>
+            <td>기존 창틀 활용</td>
+            <td>가능</td>
+            <td>대부분 창틀 교체 필요</td>
+            <td class="td-hi"><span class="badge badge-ok">✓ 기존 창틀 그대로</span></td>
+          </tr>
+          <tr>
+            <td>시공 비용</td>
+            <td>기준</td>
+            <td>2~3배<br><small style="color:var(--c-text-3)">창틀 교체 포함</small></td>
+            <td class="td-hi"><span class="badge badge-ok">✓ 복층유리 수준</span></td>
+          </tr>
+          <tr>
+            <td>결로 방지</td>
+            <td>△ 취약</td>
+            <td><span class="badge badge-ok">✓ 우수</span></td>
+            <td class="td-hi"><span class="badge badge-ok">✓ 우수</span></td>
+          </tr>
+          <tr>
+            <td>자외선 차단율<br><small style="color:var(--c-text-3)">높을수록 우수</small></td>
+            <td>40~60%</td>
+            <td>60~75%</td>
+            <td class="td-hi">99.99%</td>
+          </tr>
+          <tr>
+            <td>ZEB 1등급 인증</td>
+            <td><span class="badge badge-no">❌ 불가</span></td>
+            <td>조건부 가능</td>
+            <td class="td-hi"><span class="badge badge-ok">✓ 기준 충족</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note-box warn" style="margin-top:var(--sp-5);">
+      <h4>⚠️ 삼중유리 시공 주의사항</h4>
+      <p>4㎡ 기준 약 180kg 고중량으로 기존 창틀·힌지가 변형되는 사례가 보고됩니다. 낙하·압착 사고 위험이 높고, 창틀 전면 교체 시 공사비가 2~3배 증가합니다.</p>
+    </div>
+    <div class="note-box good">
+      <h4>✓ 하이퍼글라스의 차이</h4>
+      <p>삼중유리 수준의 단열 성능(0.875 W/㎡·K)을 유지하면서 무게는 복층유리와 동일한 120kg. 기존 창틀·힌지를 그대로 활용해 공사 기간 단축과 예산 절감이 동시에 가능합니다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── CERT ── -->
+<section id="cert" class="bg-alt">
+  <div class="container">
+    <div class="section-head">
+      <p class="label">Certification</p>
+      <h2 class="section-title">공인 성능 인증서</h2>
+      <p class="section-desc">모든 수치는 국가 공인기관의 시험성적서로 증명됩니다.</p>
+    </div>
+    <div class="cert-grid">
+      <div class="cert-card">
+        <img src="images/이중_하이퍼글라스_열관류율.png" alt="열관류율 시험성적서" loading="lazy"/>
+        <div class="cert-info">
+          <h4>열관류율 시험성적서</h4>
+          <p>KTR 한국화학융합시험연구원 | 0.875 W/㎡·K</p>
+        </div>
+      </div>
+      <div class="cert-card">
+        <img src="images/필름_성적서_1.png" alt="필름 광학특성 시험성적서" loading="lazy"/>
+        <div class="cert-info">
+          <h4>필름 광학특성 시험성적서</h4>
+          <p>LX Glas 기술연구소 | 자외선 차단율 0.01%</p>
+        </div>
+      </div>
+      <div class="cert-card">
+        <img src="images/내구성_테스트.png" alt="봉착 내구성 시험성적서" loading="lazy"/>
+        <div class="cert-info">
+          <h4>봉착 내구성 시험성적서</h4>
+          <p>KTR 한국화학융합시험연구원 | 이상없음</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── GOV R&D ── -->
+<section id="gov" class="bg-dark">
+  <div class="container">
+    <div class="section-head">
+      <p class="label">Government R&D</p>
+      <h2 class="section-title">정부 R&D 선정</h2>
+      <p class="section-desc">국토부, LH, 중진공 등 국가기관의 공식 선정으로 기술력을 검증받았습니다.</p>
+    </div>
+    <div class="gov-grid">
+      <div class="gov-card">
+        <img src="images/_공문__국토교통_기술사업화를_위한_이어달리기사업_기술키움_자유공모__선정평가_결과_알림__1__1.png" alt="국토교통과학기술진흥원 선정 공문" loading="lazy"/>
+        <div class="gov-info">
+          <p class="org">국토교통과학기술진흥원 (KAIA)</p>
+          <h4>'24년 국토교통 기술사업화를 위한 이어달리기사업 선정</h4>
+        </div>
+      </div>
+      <div class="gov-card">
+        <img src="images/2025년_하반기_구매연계_상생협력_선정평가_결과_안내_지원대상__1.png" alt="중진공 선정 공문" loading="lazy"/>
+        <div class="gov-info">
+          <p class="org">중소벤처기업진흥공단 (중진공)</p>
+          <h4>2025년 하반기 중소기업기술혁신개발사업(구매연계·상생협력) 선정</h4>
+        </div>
+      </div>
+      <div class="gov-card">
+        <img src="images/2025년_중소기업_기술혁신개발_사업_심의위원회_결과_알림_하이퍼지엔더블유__1.png" alt="LH 선정 공문" loading="lazy"/>
+        <div class="gov-info">
+          <p class="org">한국토지주택공사 (LH)</p>
+          <h4>2025년 중소기업 기술혁신개발 사업 심의위원회 선정</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CASE ── -->
+<section id="case">
+  <div class="container">
+    <div class="section-head">
+      <p class="label">Construction Cases</p>
+      <h2 class="section-title">시공 사례</h2>
+      <p class="section-desc">실제 현장에 적용된 하이퍼글라스 시공 전·후를 확인하세요.</p>
+    </div>
+
+    <h3 class="case-sub-title">시공 전·후 비교 — 마포구 건물</h3>
+    <div class="ba-grid">
+      <div class="ba-item">
+        <img src="images/공사전_내관_1.png" alt="시공 전 내관" loading="lazy"/>
+        <span class="ba-badge before">시공 전 — 내관</span>
+      </div>
+      <div class="ba-item">
+        <img src="images/공사_후_내관1.png" alt="시공 후 내관" loading="lazy"/>
+        <span class="ba-badge after">시공 후 — 내관</span>
+      </div>
+      <div class="ba-item">
+        <img src="images/공사전_내관2.png" alt="시공 전 내관 2" loading="lazy"/>
+        <span class="ba-badge before">시공 전 — 내관 2</span>
+      </div>
+      <div class="ba-item">
+        <img src="images/공사후_내관2.png" alt="시공 후 내관 2" loading="lazy"/>
+        <span class="ba-badge after">시공 후 — 내관 2</span>
+      </div>
+    </div>
+
+    <h3 class="case-sub-title">외관 시공 과정</h3>
+    <div class="case-gallery">
+      <div class="case-img-wrap">
+        <img src="images/공사전_외관.png" alt="시공 전 외관" loading="lazy"/>
+        <div class="case-label">시공 전 외관</div>
+      </div>
+      <div class="case-img-wrap">
+        <img src="images/공사전_외관2.png" alt="시공 전 외관 2" loading="lazy"/>
+        <div class="case-label">시공 전 외관 2</div>
+      </div>
+      <div class="case-img-wrap">
+        <img src="images/공사_모습.jpg" alt="시공 중" loading="lazy"/>
+        <div class="case-label">시공 중</div>
+      </div>
+      <div class="case-img-wrap">
+        <img src="images/공사_후_외관.png" alt="시공 후 외관" loading="lazy"/>
+        <div class="case-label">시공 후 외관</div>
+      </div>
+    </div>
+
+    <h3 class="case-sub-title" style="margin-top:var(--sp-12);">주요 레퍼런스</h3>
+    <div class="ref-grid">
+      <div class="ref-card">
+        <img src="images/레퍼런스.png" alt="시공 레퍼런스" loading="lazy"/>
+        <div class="ref-info"><h5>김포 가금리 전원별장 외 다수</h5></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TEAM ── -->
+<section id="team" class="bg-alt">
+  <div class="container">
+    <div class="section-head">
+      <p class="label">Expert Team</p>
+      <h2 class="section-title">녹색건축 전문가들이<br>직접 만든 창호</h2>
+      <p class="section-desc">서울대 출신 건축사와 국가녹색건축센터장 출신 박사가 설계하고 검증했습니다.</p>
+    </div>
+    <div class="team-grid">
+
+      <!-- 박원근 대표 -->
+      <div class="team-card-v2">
+        <div class="team-card-head-v2">
+          <div class="team-photo-wrap">
+            <img src="images/박원근_대표.jpg" alt="박원근 대표" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+            <div class="team-photo-placeholder" style="display:none">박</div>
+          </div>
+          <div class="team-head-text">
+            <h4 class="team-name-v2">박원근 대표</h4>
+            <p class="team-role-v2">건축사 · 대표이사</p>
+            <p class="team-school">서울대학교 건축학과 학부 및 석사 졸업</p>
+          </div>
+        </div>
+        <ul class="team-career">
+          <li>前 국토교통부 녹색건축위원회 위원</li>
+          <li>前 대한건축사협회 미래전략단장</li>
+          <li>前 서초구 건축사협회 회장</li>
+          <li>前 대한건축사협회 이사</li>
+          <li>前 서울시건축사협회 이사</li>
+          <li>국토부 장관 표창</li>
+        </ul>
+        <div class="team-badge-row">
+          <span class="team-badge">🏛 국토부 녹색건축위원회 위원 역임</span>
+        </div>
+      </div>
+
+      <!-- 조동우 연구소장 -->
+      <div class="team-card-v2">
+        <div class="team-card-head-v2">
+          <div class="team-photo-wrap">
+            <img src="images/조동우_연구소장.jpg" alt="조동우 연구소장" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+            <div class="team-photo-placeholder" style="display:none">조</div>
+          </div>
+          <div class="team-head-text">
+            <h4 class="team-name-v2">조동우 연구소장</h4>
+            <p class="team-role-v2">건축공학 박사 · 연구소장</p>
+            <p class="team-school">동국대 건축공학 학사·석사·박사 / 카네기멜론 Post Doc</p>
+          </div>
+        </div>
+        <ul class="team-career">
+          <li>前 한국건설기술연구원 국가녹색건축센터 센터장</li>
+          <li>前 한국건설기술연구원 건축에너지연구소 선임연구위원</li>
+          <li>前 국토부 중앙건축위원회 위원</li>
+          <li>前 건축친환경설비학회 부회장</li>
+          <li>건축 관련 장관표창 8건 · 우수논문상 2건</li>
+        </ul>
+        <div class="team-badge-row">
+          <span class="team-badge">🌿 국가녹색건축센터장 역임</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<div class="cta-section">
+  <div class="container">
+    <h2>지금 바로 하이퍼글라스를<br>도입해 보세요</h2>
+    <p>냉난방비 절감 · 결로 방지 · 자외선 차단 — 하나로 해결합니다.<br>전문가가 현장을 분석하고 최적의 솔루션을 제안드립니다.</p>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:var(--sp-4);">
+      <a href="https://hipergnw.github.io/introduce/" class="btn btn-primary btn-pulse" style="font-size:1.05rem;padding:0.9rem 2.5rem;">이용 / 견적 문의 →</a>
+      <a href="docs/회사소개서_하이퍼지엔더블유.pdf" download
+         style="display:inline-flex;align-items:center;gap:8px;color:rgba(255,255,255,0.55);font-size:var(--fs-sm);font-weight:500;text-decoration:none;padding:0.5rem 1.2rem;border:1px solid rgba(255,255,255,0.2);border-radius:100px;transition:all 0.2s;"
+         onmouseover="this.style.color='rgba(255,255,255,0.9)';this.style.borderColor='rgba(255,255,255,0.45)'"
+         onmouseout="this.style.color='rgba(255,255,255,0.55)';this.style.borderColor='rgba(255,255,255,0.2)'">
+        📄 회사소개서 다운로드
+      </a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div style="padding-bottom:var(--sp-16);">
+    <p style="margin-bottom:var(--sp-3);">© 2025 (주)하이퍼지앤더블유 &nbsp;|&nbsp; 경기도 김포시 하성면 양택리 151-21번지 1동</p>
+    <p style="color:rgba(255,255,255,0.35);">
+      Contact &nbsp;|&nbsp;
+      <a href="tel:010-9736-7035" style="color:rgba(255,255,255,0.45);text-decoration:none;">010-9736-7035</a>
+      &nbsp;/&nbsp;
+      <a href="mailto:ceo@hipergnw.com" style="color:rgba(255,255,255,0.45);text-decoration:none;">ceo@hipergnw.com</a>
+    </p>
+  </div>
+</footer>
+
+<!-- ── FLOATING CTA (항상 하단 고정) ── -->
+<div class="floating-cta" id="floatingCta">
+  <a href="https://hipergnw.github.io/introduce/">
+    🌿 이용 / 견적 문의 →
+  </a>
+</div>
+
+<script>
+  // Mobile hamburger
+  const hamburger = document.getElementById('hamburger');
+  const navLinks  = document.getElementById('nav-links');
+  hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+</script>
+</body>
+</html>
