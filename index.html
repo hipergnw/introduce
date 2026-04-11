@@ -736,6 +736,7 @@
     #gov .section-title { color: var(--c-text-inv); }
     #gov .section-desc  { color: rgba(255,255,255,0.55); }
     .gov-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: var(--sp-5); }
+    .gov-grid-4 { grid-template-columns: repeat(4,1fr); }
     .gov-card {
       background: rgba(255,255,255,0.06);
       border: 1px solid rgba(82,183,136,0.18);
@@ -917,7 +918,7 @@
 
       .benefits-grid { grid-template-columns: 1fr; }
       .cert-grid { grid-template-columns: 1fr; }
-      .gov-grid  { grid-template-columns: 1fr; }
+      .gov-grid, .gov-grid-4  { grid-template-columns: 1fr; }
       .ba-grid   { grid-template-columns: 1fr; }
       .case-gallery { grid-template-columns: 1fr; }
       .ref-grid  { grid-template-columns: 1fr; }
@@ -993,7 +994,7 @@
     </div>
   </div>
   <div class="hero-image">
-    <img src="images/공사_후_외관.png" alt="하이퍼글라스 시공 후 외관" loading="eager" />
+    <img src="공사 후 외관.png" alt="하이퍼글라스 시공 후 외관" loading="eager" />
   </div>
 </section>
 
@@ -1538,21 +1539,21 @@
     </div>
     <div class="cert-grid">
       <div class="cert-card">
-        <img src="images/이중_하이퍼글라스_열관류율.png" alt="열관류율 시험성적서" loading="lazy"/>
+        <img src="이중 하이퍼글라스 열관류율.png" alt="열관류율 시험성적서" loading="lazy"/>
         <div class="cert-info">
           <h4>열관류율 시험성적서</h4>
           <p>KTR 한국화학융합시험연구원 | 0.875 W/㎡·K</p>
         </div>
       </div>
       <div class="cert-card">
-        <img src="images/필름_성적서_1.png" alt="필름 광학특성 시험성적서" loading="lazy"/>
+        <img src="필름 성적서_1.png" alt="필름 광학특성 시험성적서" loading="lazy"/>
         <div class="cert-info">
           <h4>필름 광학특성 시험성적서</h4>
           <p>LX Glas 기술연구소 | 자외선 차단율 0.01%</p>
         </div>
       </div>
       <div class="cert-card">
-        <img src="images/내구성_테스트.png" alt="봉착 내구성 시험성적서" loading="lazy"/>
+        <img src="내구성 테스트.png" alt="봉착 내구성 시험성적서" loading="lazy"/>
         <div class="cert-info">
           <h4>봉착 내구성 시험성적서</h4>
           <p>KTR 한국화학융합시험연구원 | 이상없음</p>
@@ -1568,28 +1569,35 @@
     <div class="section-head">
       <p class="label">Government R&D</p>
       <h2 class="section-title">정부 R&D 선정</h2>
-      <p class="section-desc">국토부, LH, 중진공 등 국가기관의 공식 선정으로 기술력을 검증받았습니다.</p>
+      <p class="section-desc">국토부, LH, 중진공, 서울연구원 등 국가기관의 공식 선정으로 기술력을 검증받았습니다.</p>
     </div>
-    <div class="gov-grid">
+    <div class="gov-grid gov-grid-4">
       <div class="gov-card">
-        <img src="images/_공문__국토교통_기술사업화를_위한_이어달리기사업_기술키움_자유공모__선정평가_결과_알림__1__1.png" alt="국토교통과학기술진흥원 선정 공문" loading="lazy"/>
+        <img src="(공문) 국토교통 기술사업화를 위한 이어달리기사업 기술키움 자유공모 선정평가 결과 알림 1 1.png" alt="국토교통과학기술진흥원 선정 공문" loading="lazy"/>
         <div class="gov-info">
           <p class="org">국토교통과학기술진흥원 (KAIA)</p>
           <h4>'24년 국토교통 기술사업화를 위한 이어달리기사업 선정</h4>
         </div>
       </div>
       <div class="gov-card">
-        <img src="images/2025년_하반기_구매연계_상생협력_선정평가_결과_안내_지원대상__1.png" alt="중진공 선정 공문" loading="lazy"/>
+        <img src="2025년 하반기 구매연계·상생협력 선정평가 결과 안내 지원대상 1.png" alt="중진공 선정 공문" loading="lazy"/>
         <div class="gov-info">
           <p class="org">중소벤처기업진흥공단 (중진공)</p>
           <h4>2025년 하반기 중소기업기술혁신개발사업(구매연계·상생협력) 선정</h4>
         </div>
       </div>
       <div class="gov-card">
-        <img src="images/2025년_중소기업_기술혁신개발_사업_심의위원회_결과_알림_하이퍼지엔더블유__1.png" alt="LH 선정 공문" loading="lazy"/>
+        <img src="2025년「중소기업 기술혁신개발 사업」심의위원회 결과 알림 하이퍼지엔더블유 1.png" alt="LH 선정 공문" loading="lazy"/>
         <div class="gov-info">
           <p class="org">한국토지주택공사 (LH)</p>
           <h4>2025년 중소기업 기술혁신개발 사업 심의위원회 선정</h4>
+        </div>
+      </div>
+      <div class="gov-card">
+        <img src="_발표평가_결과___주_하이퍼지앤더블유_1.png" alt="서울연구원 선정 공문" loading="lazy"/>
+        <div class="gov-info">
+          <p class="org">서울연구원</p>
+          <h4>'24년 기후변화 대응 혁신기술 실증지원사업 자유과제형 선정 (우선협상순위 1위)</h4>
         </div>
       </div>
     </div>
@@ -1608,19 +1616,19 @@
     <h3 class="case-sub-title">시공 전·후 비교 — 마포구 건물</h3>
     <div class="ba-grid">
       <div class="ba-item">
-        <img src="images/공사전_내관_1.png" alt="시공 전 내관" loading="lazy"/>
+        <img src="공사전 내관 1.png" alt="시공 전 내관" loading="lazy"/>
         <span class="ba-badge before">시공 전 — 내관</span>
       </div>
       <div class="ba-item">
-        <img src="images/공사_후_내관1.png" alt="시공 후 내관" loading="lazy"/>
+        <img src="공사 후 내관1.png" alt="시공 후 내관" loading="lazy"/>
         <span class="ba-badge after">시공 후 — 내관</span>
       </div>
       <div class="ba-item">
-        <img src="images/공사전_내관2.png" alt="시공 전 내관 2" loading="lazy"/>
+        <img src="공사전 내관2.png" alt="시공 전 내관 2" loading="lazy"/>
         <span class="ba-badge before">시공 전 — 내관 2</span>
       </div>
       <div class="ba-item">
-        <img src="images/공사후_내관2.png" alt="시공 후 내관 2" loading="lazy"/>
+        <img src="공사후 내관2.png" alt="시공 후 내관 2" loading="lazy"/>
         <span class="ba-badge after">시공 후 — 내관 2</span>
       </div>
     </div>
@@ -1628,19 +1636,19 @@
     <h3 class="case-sub-title">외관 시공 과정</h3>
     <div class="case-gallery">
       <div class="case-img-wrap">
-        <img src="images/공사전_외관.png" alt="시공 전 외관" loading="lazy"/>
+        <img src="공사전 외관.png" alt="시공 전 외관" loading="lazy"/>
         <div class="case-label">시공 전 외관</div>
       </div>
       <div class="case-img-wrap">
-        <img src="images/공사전_외관2.png" alt="시공 전 외관 2" loading="lazy"/>
+        <img src="공사전 외관2.png" alt="시공 전 외관 2" loading="lazy"/>
         <div class="case-label">시공 전 외관 2</div>
       </div>
       <div class="case-img-wrap">
-        <img src="images/공사_모습.jpg" alt="시공 중" loading="lazy"/>
+        <img src="공사 모습.jpg" alt="시공 중" loading="lazy"/>
         <div class="case-label">시공 중</div>
       </div>
       <div class="case-img-wrap">
-        <img src="images/공사_후_외관.png" alt="시공 후 외관" loading="lazy"/>
+        <img src="공사 후 외관.png" alt="시공 후 외관" loading="lazy"/>
         <div class="case-label">시공 후 외관</div>
       </div>
     </div>
@@ -1648,7 +1656,7 @@
     <h3 class="case-sub-title" style="margin-top:var(--sp-12);">주요 레퍼런스</h3>
     <div class="ref-grid">
       <div class="ref-card">
-        <img src="images/레퍼런스.png" alt="시공 레퍼런스" loading="lazy"/>
+        <img src="레퍼런스.png" alt="시공 레퍼런스" loading="lazy"/>
         <div class="ref-info"><h5>김포 가금리 전원별장 외 다수</h5></div>
       </div>
     </div>
@@ -1669,7 +1677,7 @@
       <div class="team-card-v2">
         <div class="team-card-head-v2">
           <div class="team-photo-wrap">
-            <img src="images/박원근_대표.jpg" alt="박원근 대표" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+            <img src="아빠 사진.png" alt="박원근 대표" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
             <div class="team-photo-placeholder" style="display:none">박</div>
           </div>
           <div class="team-head-text">
@@ -1695,7 +1703,7 @@
       <div class="team-card-v2">
         <div class="team-card-head-v2">
           <div class="team-photo-wrap">
-            <img src="images/조동우_연구소장.jpg" alt="조동우 연구소장" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+            <img src="조박사님 사진.png" alt="조동우 연구소장" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
             <div class="team-photo-placeholder" style="display:none">조</div>
           </div>
           <div class="team-head-text">
