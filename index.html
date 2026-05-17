@@ -679,11 +679,15 @@
       padding: var(--sp-10) var(--sp-8);
       margin-top: var(--sp-8);
     }
-    .principle-grid {
+    /* 상단 — 3중 / 4중 유리 이미지 비교 */
+    .principle-imgs {
       display: grid;
-      grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
-      gap: var(--sp-10);
-      align-items: center;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--sp-8);
+      align-items: end;
+      margin-bottom: var(--sp-10);
+      padding-bottom: var(--sp-8);
+      border-bottom: 1px dashed var(--c-border);
     }
     .principle-img-wrap {
       text-align: center;
@@ -691,15 +695,35 @@
     .principle-img-wrap img {
       max-width: 100%;
       height: auto;
-      max-height: 360px;
+      max-height: 320px;
       object-fit: contain;
       filter: drop-shadow(0 8px 24px rgba(0,0,0,0.12));
     }
     .principle-img-caption {
-      margin-top: var(--sp-3);
-      font-size: var(--fs-xs);
-      color: var(--c-text-3);
+      margin-top: var(--sp-4);
+      font-size: var(--fs-sm);
+      color: var(--c-text-2);
       font-weight: var(--fw-semi);
+      line-height: var(--lh-snug);
+    }
+    .principle-img-tag {
+      display: inline-block;
+      margin-right: var(--sp-2);
+      padding: 2px 10px;
+      border-radius: var(--r-pill);
+      background: var(--c-green-5);
+      color: var(--c-green-2);
+      font-size: var(--fs-xs);
+      font-weight: var(--fw-bold);
+      letter-spacing: 0.02em;
+      vertical-align: 2px;
+    }
+
+    /* 하단 — 텍스트 본문 */
+    .principle-text {
+      max-width: 820px;
+      margin: 0 auto;
+      text-align: center;
     }
     .principle-label {
       font-size: var(--fs-xs);
@@ -726,6 +750,7 @@
       color: var(--c-text-2);
       line-height: var(--lh-loose);
       margin-bottom: var(--sp-4);
+      text-align: left;
     }
     .principle-body strong { color: var(--c-green-2); font-weight: var(--fw-bold); }
     .principle-kpis {
@@ -752,6 +777,103 @@
       font-size: var(--fs-xs);
       color: var(--c-text-3);
       margin-top: 4px;
+    }
+
+    /* ═══════════════════════════════════════════
+       PATENT BLOCK — 특허 등록증 갤러리
+    ═══════════════════════════════════════════ */
+    .patent-block {
+      background: var(--c-bg);
+      border: 1px solid var(--c-border);
+      border-radius: var(--r-lg);
+      padding: var(--sp-10) var(--sp-8);
+      margin-top: var(--sp-6);
+    }
+    .patent-head {
+      text-align: center;
+      margin-bottom: var(--sp-8);
+    }
+    .patent-label {
+      font-size: var(--fs-xs);
+      font-weight: var(--fw-bold);
+      letter-spacing: var(--ls-wider);
+      text-transform: uppercase;
+      color: var(--c-green-3);
+      margin-bottom: var(--sp-3);
+    }
+    .patent-title {
+      font-family: 'Noto Serif KR', serif;
+      font-size: var(--fs-xl);
+      font-weight: var(--fw-bold);
+      color: var(--c-text-1);
+      line-height: var(--lh-snug);
+      margin-bottom: var(--sp-3);
+    }
+    .patent-title em {
+      font-style: normal;
+      color: var(--c-green-2);
+    }
+    .patent-sub {
+      font-size: var(--fs-sm);
+      color: var(--c-text-3);
+    }
+    .patent-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--sp-5);
+    }
+    .patent-card {
+      display: flex;
+      flex-direction: column;
+      background: var(--c-bg-alt);
+      border: 1px solid var(--c-border);
+      border-radius: var(--r-md);
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+    .patent-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--c-green-3);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.1);
+    }
+    .patent-img-wrap {
+      background: #ffffff;
+      padding: var(--sp-3);
+      border-bottom: 1px solid var(--c-border);
+    }
+    .patent-img-wrap img {
+      width: 100%;
+      height: auto;
+      display: block;
+      aspect-ratio: 1 / 1.414;
+      object-fit: contain;
+      object-position: top;
+    }
+    .patent-info {
+      padding: var(--sp-5);
+      display: flex;
+      flex-direction: column;
+      gap: var(--sp-2);
+      flex: 1;
+    }
+    .patent-no {
+      font-size: var(--fs-xs);
+      font-weight: var(--fw-bold);
+      letter-spacing: 0.04em;
+      color: var(--c-green-3);
+    }
+    .patent-name {
+      font-size: var(--fs-sm);
+      font-weight: var(--fw-bold);
+      color: var(--c-text-1);
+      line-height: var(--lh-snug);
+      flex: 1;
+    }
+    .patent-date {
+      font-size: var(--fs-xs);
+      color: var(--c-text-3);
     }
 
     /* ═══════════════════════════════════════════
@@ -784,7 +906,7 @@
     }
     .benefit-tag { font-size: var(--fs-xs); font-weight: var(--fw-bold); letter-spacing: var(--ls-wider); text-transform: uppercase; color: var(--c-green-3); margin-bottom: var(--sp-1); }
     .benefit-title { font-size: var(--fs-md); font-weight: var(--fw-bold); color: var(--c-text-inv); }
-    .benefit-body { padding: var(--sp-6); display: flex; flex-direction: column; }
+    .benefit-body { padding: var(--sp-4); display: flex; flex-direction: column; }
     /* prob/sol 박스 동일 높이 */
     .prob-box { min-height: 90px; }
     .sol-box  { min-height: 90px; }
@@ -1094,13 +1216,15 @@
       .install-kpi-row { grid-template-columns: 1fr; }
       .step-compare-grid { grid-template-columns: 1fr; }
       .step-arrow { display: none; }
-      .principle-grid { grid-template-columns: 1fr; gap: var(--sp-6); }
+      .principle-imgs { grid-template-columns: 1fr; gap: var(--sp-6); margin-bottom: var(--sp-8); padding-bottom: var(--sp-6); }
       .principle-block { padding: var(--sp-8) var(--sp-5); }
       .principle-img-wrap img { max-height: 240px; }
       .principle-title { font-size: var(--fs-lg); }
       .principle-kpis { grid-template-columns: repeat(3, 1fr); gap: var(--sp-2); }
       .principle-kpi { padding: var(--sp-3) var(--sp-2); }
       .principle-kpi-val { font-size: 1rem; }
+      .patent-block { padding: var(--sp-8) var(--sp-5); }
+      .patent-grid { grid-template-columns: 1fr; gap: var(--sp-4); }
 
       .benefits-grid { grid-template-columns: 1fr; }
       /* 모바일 1열에서는 그림 영역 높이 통일 불필요 — 자연 높이로 */
@@ -1145,7 +1269,6 @@
 
       /* 운영 혜택 카드 — 모바일에서 padding 축소 */
       .benefit-card-head { padding: var(--sp-4) var(--sp-5); }
-      .benefit-body { padding: var(--sp-4) !important; }
       .benefit-num { font-size: 2.2rem; }
 
       /* 표 — 모바일에서 가로 스크롤 (spec-wrap이 이미 overflow-x:auto) */
@@ -1177,7 +1300,7 @@
 <section class="hero">
   <!-- 배경 이미지 (반투명 오버레이) -->
   <div class="hero-bg-img">
-    <img src="공사 후 외관.png" alt="" aria-hidden="true" />
+    <img src="images/공사 후 외관.png" alt="" aria-hidden="true" />
   </div>
   <div class="hero-content">
     <div class="hero-badge">국토부 · LH · 중진공 · 서울연구원 인정 기술력</div>
@@ -1403,38 +1526,92 @@
 
     <!-- ── 하이퍼글라스 원리 설명 ── -->
     <div class="principle-block">
-      <div class="principle-grid">
+      <!-- 상단: 3중 / 4중 유리 비교 -->
+      <div class="principle-imgs">
         <div class="principle-img-wrap">
-          <img src="하이퍼 글라스 3중 유리.png" alt="하이퍼글라스 유리 사이 자외선 차단 필름 삽입 구조" loading="lazy"/>
-          <div class="principle-img-caption">유리 사이에 자외선 차단 필름 1~2장 삽입 — 공기층 추가</div>
-        </div>
-        <div class="principle-text">
-          <p class="principle-label">How it works</p>
-          <h3 class="principle-title">무게 증가 <em>없이</em><br>단열 성능을 끌어올린 비결</h3>
-          <p class="principle-body">
-            하이퍼글라스는 두 장의 유리 사이에 <strong>무게가 거의 없는 투명 자외선 차단 필름을 1장 또는 2장</strong> 삽입하는 방식입니다.
-            얇은 자외선 차단 필름이 들어가면서 그 양옆으로 <strong>공기층이 1개에서 2~3개로 늘어나</strong> 단열 성능이 비약적으로 향상됩니다.
-          </p>
-          <p class="principle-body">
-            기존 삼중유리는 유리를 한 장 더 추가해 무게가 1.5~2배로 늘어나지만,
-            하이퍼글라스는 <strong>자외선 차단 필름만 추가</strong>되기 때문에 무게는 복층유리와 같은 수준을 유지합니다.
-            그래서 기존 창틀과 힌지를 그대로 재사용할 수 있고, 실내 시공이 가능합니다.
-          </p>
-          <div class="principle-kpis">
-            <div class="principle-kpi">
-              <div class="principle-kpi-val">+1~2층</div>
-              <div class="principle-kpi-label">공기층 추가</div>
-            </div>
-            <div class="principle-kpi">
-              <div class="principle-kpi-val">≈ 0 kg</div>
-              <div class="principle-kpi-label">자외선 차단 필름 무게</div>
-            </div>
-            <div class="principle-kpi">
-              <div class="principle-kpi-val">0.875</div>
-              <div class="principle-kpi-label">W/㎡·K 열관류율</div>
-            </div>
+          <img src="images/하이퍼 글라스 3중 유리.png" alt="하이퍼글라스 3중 구조 — 유리 2장 + 자외선 차단 필름 1장" loading="lazy"/>
+          <div class="principle-img-caption">
+            <span class="principle-img-tag">3중 구조</span>
+            유리 2장 + 자외선 차단 필름 1장
           </div>
         </div>
+        <div class="principle-img-wrap">
+          <img src="images/하이퍼 글라스 4중 유리.png" alt="하이퍼글라스 4중 구조 — 유리 2장 + 자외선 차단 필름 2장" loading="lazy"/>
+          <div class="principle-img-caption">
+            <span class="principle-img-tag">4중 구조</span>
+            유리 2장 + 자외선 차단 필름 2장
+          </div>
+        </div>
+      </div>
+
+      <!-- 하단: 텍스트 설명 -->
+      <div class="principle-text">
+        <p class="principle-label">How it works</p>
+        <h3 class="principle-title">무게 증가 <em>없이</em> 단열 성능을 끌어올린 비결</h3>
+        <p class="principle-body">
+          하이퍼글라스는 두 장의 유리 사이에 <strong>무게가 거의 없는 투명 자외선 차단 필름을 1장 또는 2장</strong> 삽입하는 방식입니다.
+          얇은 자외선 차단 필름이 들어가면서 그 양옆으로 <strong>공기층이 1개에서 2~3개로 늘어나</strong> 단열 성능이 비약적으로 향상됩니다.
+        </p>
+        <p class="principle-body">
+          기존 삼중유리는 유리를 한 장 더 추가해 무게가 1.5~2배로 늘어나지만,
+          하이퍼글라스는 <strong>자외선 차단 필름만 추가</strong>되기 때문에 무게는 복층유리와 같은 수준을 유지합니다.
+          그래서 기존 창틀과 힌지를 그대로 재사용할 수 있고, 실내 시공이 가능합니다.
+        </p>
+        <div class="principle-kpis">
+          <div class="principle-kpi">
+            <div class="principle-kpi-val">+1~2층</div>
+            <div class="principle-kpi-label">공기층 추가</div>
+          </div>
+          <div class="principle-kpi">
+            <div class="principle-kpi-val">≈ 0 kg</div>
+            <div class="principle-kpi-label">자외선 차단 필름 무게</div>
+          </div>
+          <div class="principle-kpi">
+            <div class="principle-kpi-val">0.875</div>
+            <div class="principle-kpi-label">W/㎡·K 열관류율</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── 특허 등록증 갤러리 ── -->
+    <div class="patent-block">
+      <div class="patent-head">
+        <p class="patent-label">Patents</p>
+        <h3 class="patent-title">국가 공인 <em>특허 3건</em>으로 검증된 기술</h3>
+        <p class="patent-sub">대한민국 특허청 등록 — 복층 유리 제조 방법 및 시스템 창호 관련</p>
+      </div>
+      <div class="patent-grid">
+        <a href="images/특허증_1.jpg" target="_blank" rel="noopener" class="patent-card">
+          <div class="patent-img-wrap">
+            <img src="images/특허증_1.jpg" alt="특허 제 10-2653747 호 — 복층 유리 제조 방법 및 이를 포함하는 복층 유리 창호 시스템" loading="lazy"/>
+          </div>
+          <div class="patent-info">
+            <p class="patent-no">특허 제 10-2653747 호</p>
+            <h4 class="patent-name">복층 유리 제조 방법 및 이를 포함하는 복층 유리 창호 시스템</h4>
+            <p class="patent-date">2024.03.28 등록</p>
+          </div>
+        </a>
+        <a href="images/특허증_2.jpg" target="_blank" rel="noopener" class="patent-card">
+          <div class="patent-img-wrap">
+            <img src="images/특허증_2.jpg" alt="특허 제 10-2622381 호 — 복층 유리 제조 방법 및 이를 통해 제조된 복층 유리" loading="lazy"/>
+          </div>
+          <div class="patent-info">
+            <p class="patent-no">특허 제 10-2622381 호</p>
+            <h4 class="patent-name">복층 유리 제조 방법 및 이를 통해 제조된 복층 유리</h4>
+            <p class="patent-date">2024.01.03 등록</p>
+          </div>
+        </a>
+        <a href="images/특허증_3.jpg" target="_blank" rel="noopener" class="patent-card">
+          <div class="patent-img-wrap">
+            <img src="images/특허증_3.jpg" alt="특허 제 10-2635235 호 — 복합 시스템 창호" loading="lazy"/>
+          </div>
+          <div class="patent-info">
+            <p class="patent-no">특허 제 10-2635235 호</p>
+            <h4 class="patent-name">복합 시스템 창호</h4>
+            <p class="patent-date">2024.02.05 등록</p>
+          </div>
+        </a>
       </div>
     </div>
 
@@ -1504,69 +1681,69 @@
             <h3 class="benefit-title">결로 방지</h3>
           </div>
         </div>
-        <div class="benefit-body" style="padding:var(--sp-4);">
+        <div class="benefit-body">
           <!-- 결로 발생 원리 SVG -->
           <div class="benefit-visual">
             <p class="visual-title">결로 발생 원리 — 온도차 비교</p>
-            <svg viewBox="0 0 340 175" xmlns="http://www.w3.org/2000/svg" width="100%" style="overflow:visible;">
+            <svg viewBox="0 0 340 165" xmlns="http://www.w3.org/2000/svg" width="100%" style="overflow:visible;">
               <!-- ── 단일 유리 박스 ── -->
-              <rect x="4" y="18" width="148" height="138" rx="8" fill="none" stroke="#e53935" stroke-width="1.5" stroke-dasharray="4,2"/>
-              <text x="76" y="31" font-size="9" fill="#ff6b6b" font-family="sans-serif" font-weight="bold" text-anchor="middle">단일 유리</text>
+              <rect x="4" y="4" width="148" height="138" rx="8" fill="none" stroke="#e53935" stroke-width="1.5" stroke-dasharray="4,2"/>
+              <text x="76" y="17" font-size="9" fill="#ff6b6b" font-family="sans-serif" font-weight="bold" text-anchor="middle">단일 유리</text>
               <!-- 실내 (따뜻) -->
-              <rect x="8" y="36" width="60" height="116" rx="6" fill="rgba(160,70,30,0.45)"/>
-              <text x="38" y="76" font-size="20" text-anchor="middle">🔥</text>
-              <text x="38" y="92" font-size="8" fill="rgba(255,255,255,0.55)" font-family="sans-serif" text-anchor="middle">실내</text>
-              <text x="38" y="132" font-size="15" fill="#ffaa55" font-family="sans-serif" font-weight="bold" text-anchor="middle">22°C</text>
+              <rect x="8" y="22" width="60" height="116" rx="6" fill="rgba(160,70,30,0.45)"/>
+              <text x="38" y="62" font-size="20" text-anchor="middle">🔥</text>
+              <text x="38" y="78" font-size="8" fill="rgba(255,255,255,0.55)" font-family="sans-serif" text-anchor="middle">실내</text>
+              <!-- 27도 차이 뱃지 — 실내 박스 내부, 실내↔22°C 사이 -->
+              <rect x="14" y="92" width="48" height="14" rx="7" fill="#e53935" stroke="rgba(255,255,255,0.2)" stroke-width="0.5"/>
+              <text x="38" y="102" font-size="7.5" fill="white" font-family="sans-serif" font-weight="bold" text-anchor="middle">27도 차이!</text>
+              <text x="38" y="123" font-size="14" fill="#ffaa55" font-family="sans-serif" font-weight="bold" text-anchor="middle">22°C</text>
               <!-- 유리 (단일, 얇게) -->
-              <rect x="70" y="36" width="8" height="116" rx="3" fill="rgba(82,183,136,0.55)" stroke="#52b788" stroke-width="1"/>
-              <!-- 27도 차이 뱃지 — 박스 위쪽 (불 이모지와 겹치지 않도록) -->
-              <rect x="46" y="0" width="60" height="20" rx="10" fill="#e53935" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
-              <text x="76" y="14" font-size="9" fill="white" font-family="sans-serif" font-weight="bold" text-anchor="middle">⚡ 27도 차이!</text>
+              <rect x="70" y="22" width="8" height="116" rx="3" fill="rgba(82,183,136,0.55)" stroke="#52b788" stroke-width="1"/>
               <!-- 결로 물방울 -->
-              <circle cx="74" cy="66" r="3.5" fill="#90caf9" opacity="0.95"/>
-              <circle cx="74" cy="84" r="3.5" fill="#90caf9" opacity="0.95"/>
-              <circle cx="74" cy="102" r="3.5" fill="#90caf9" opacity="0.95"/>
-              <circle cx="74" cy="120" r="3.5" fill="#90caf9" opacity="0.95"/>
+              <circle cx="74" cy="52" r="3.5" fill="#90caf9" opacity="0.95"/>
+              <circle cx="74" cy="70" r="3.5" fill="#90caf9" opacity="0.95"/>
+              <circle cx="74" cy="88" r="3.5" fill="#90caf9" opacity="0.95"/>
+              <circle cx="74" cy="106" r="3.5" fill="#90caf9" opacity="0.95"/>
               <!-- 실외 (차가움) -->
-              <rect x="80" y="36" width="68" height="116" rx="6" fill="rgba(20,50,110,0.55)"/>
-              <text x="114" y="76" font-size="20" text-anchor="middle">❄️</text>
-              <text x="114" y="92" font-size="8" fill="rgba(255,255,255,0.55)" font-family="sans-serif" text-anchor="middle">실외</text>
-              <text x="114" y="132" font-size="15" fill="#90caf9" font-family="sans-serif" font-weight="bold" text-anchor="middle">-5°C</text>
+              <rect x="80" y="22" width="68" height="116" rx="6" fill="rgba(20,50,110,0.55)"/>
+              <text x="114" y="62" font-size="20" text-anchor="middle">❄️</text>
+              <text x="114" y="78" font-size="8" fill="rgba(255,255,255,0.55)" font-family="sans-serif" text-anchor="middle">실외</text>
+              <text x="114" y="123" font-size="14" fill="#90caf9" font-family="sans-serif" font-weight="bold" text-anchor="middle">-5°C</text>
               <!-- 결로 발생 텍스트 -->
-              <text x="76" y="169" font-size="9.5" fill="#ff6b6b" font-family="sans-serif" font-weight="bold" text-anchor="middle">결로 발생</text>
+              <text x="76" y="155" font-size="9.5" fill="#ff6b6b" font-family="sans-serif" font-weight="bold" text-anchor="middle">결로 발생</text>
 
               <!-- ── 화살표 ── -->
-              <text x="166" y="99" font-size="22" fill="#52b788" text-anchor="middle">→</text>
+              <text x="166" y="85" font-size="22" fill="#52b788" text-anchor="middle">→</text>
 
               <!-- ── 하이퍼글라스 박스 ── -->
-              <rect x="180" y="18" width="156" height="138" rx="8" fill="rgba(82,183,136,0.07)" stroke="#52b788" stroke-width="1.5"/>
-              <text x="258" y="31" font-size="9" fill="#52b788" font-family="sans-serif" font-weight="bold" text-anchor="middle">하이퍼글라스 (공기층 2개)</text>
+              <rect x="180" y="4" width="156" height="138" rx="8" fill="rgba(82,183,136,0.07)" stroke="#52b788" stroke-width="1.5"/>
+              <text x="258" y="17" font-size="9" fill="#52b788" font-family="sans-serif" font-weight="bold" text-anchor="middle">하이퍼글라스 (공기층 2개)</text>
               <!-- 실내 -->
-              <rect x="184" y="36" width="36" height="116" rx="6" fill="rgba(160,70,30,0.45)"/>
-              <text x="202" y="76" font-size="16" text-anchor="middle">🔥</text>
-              <text x="202" y="90" font-size="7" fill="rgba(255,255,255,0.55)" font-family="sans-serif" text-anchor="middle">실내</text>
-              <text x="202" y="128" font-size="12" fill="#ffaa55" font-family="sans-serif" font-weight="bold" text-anchor="middle">22°C</text>
+              <rect x="184" y="22" width="36" height="116" rx="6" fill="rgba(160,70,30,0.45)"/>
+              <text x="202" y="62" font-size="16" text-anchor="middle">🔥</text>
+              <text x="202" y="76" font-size="7" fill="rgba(255,255,255,0.55)" font-family="sans-serif" text-anchor="middle">실내</text>
+              <text x="202" y="114" font-size="12" fill="#ffaa55" font-family="sans-serif" font-weight="bold" text-anchor="middle">22°C</text>
               <!-- 유리1 -->
-              <rect x="222" y="36" width="7" height="116" rx="3" fill="rgba(82,183,136,0.5)" stroke="#52b788" stroke-width="0.8"/>
+              <rect x="222" y="22" width="7" height="116" rx="3" fill="rgba(82,183,136,0.5)" stroke="#52b788" stroke-width="0.8"/>
               <!-- 공기층1 -->
-              <rect x="231" y="36" width="22" height="116" rx="4" fill="rgba(52,183,136,0.15)" stroke="#52b788" stroke-width="0.6"/>
-              <text x="242" y="76" font-size="7" fill="#52b788" font-family="sans-serif" font-weight="bold" text-anchor="middle">공기층</text>
-              <text x="242" y="90" font-size="10" fill="#b7e4c7" font-family="sans-serif" font-weight="bold" text-anchor="middle">13°C</text>
-              <text x="242" y="102" font-size="6.5" fill="rgba(255,255,255,0.4)" font-family="sans-serif" text-anchor="middle">9도차</text>
+              <rect x="231" y="22" width="22" height="116" rx="4" fill="rgba(52,183,136,0.15)" stroke="#52b788" stroke-width="0.6"/>
+              <text x="242" y="62" font-size="7" fill="#52b788" font-family="sans-serif" font-weight="bold" text-anchor="middle">공기층</text>
+              <text x="242" y="76" font-size="10" fill="#b7e4c7" font-family="sans-serif" font-weight="bold" text-anchor="middle">13°C</text>
+              <text x="242" y="88" font-size="6.5" fill="rgba(255,255,255,0.4)" font-family="sans-serif" text-anchor="middle">9도차</text>
               <!-- 유리2 -->
-              <rect x="255" y="36" width="7" height="116" rx="3" fill="rgba(82,183,136,0.5)" stroke="#52b788" stroke-width="0.8"/>
+              <rect x="255" y="22" width="7" height="116" rx="3" fill="rgba(82,183,136,0.5)" stroke="#52b788" stroke-width="0.8"/>
               <!-- 공기층2 -->
-              <rect x="264" y="36" width="22" height="116" rx="4" fill="rgba(52,183,136,0.08)" stroke="#52b788" stroke-width="0.6"/>
-              <text x="275" y="76" font-size="7" fill="#52b788" font-family="sans-serif" font-weight="bold" text-anchor="middle">공기층</text>
-              <text x="275" y="90" font-size="10" fill="#b7e4c7" font-family="sans-serif" font-weight="bold" text-anchor="middle">4°C</text>
-              <text x="275" y="102" font-size="6.5" fill="rgba(255,255,255,0.4)" font-family="sans-serif" text-anchor="middle">9도차</text>
+              <rect x="264" y="22" width="22" height="116" rx="4" fill="rgba(52,183,136,0.08)" stroke="#52b788" stroke-width="0.6"/>
+              <text x="275" y="62" font-size="7" fill="#52b788" font-family="sans-serif" font-weight="bold" text-anchor="middle">공기층</text>
+              <text x="275" y="76" font-size="10" fill="#b7e4c7" font-family="sans-serif" font-weight="bold" text-anchor="middle">4°C</text>
+              <text x="275" y="88" font-size="6.5" fill="rgba(255,255,255,0.4)" font-family="sans-serif" text-anchor="middle">9도차</text>
               <!-- 유리3 -->
-              <rect x="288" y="36" width="7" height="116" rx="3" fill="rgba(82,183,136,0.4)" stroke="#52b788" stroke-width="0.8"/>
+              <rect x="288" y="22" width="7" height="116" rx="3" fill="rgba(82,183,136,0.4)" stroke="#52b788" stroke-width="0.8"/>
               <!-- 실외 -->
-              <rect x="297" y="36" width="36" height="116" rx="6" fill="rgba(20,50,110,0.55)"/>
-              <text x="315" y="76" font-size="16" text-anchor="middle">❄️</text>
-              <text x="315" y="90" font-size="7" fill="rgba(255,255,255,0.55)" font-family="sans-serif" text-anchor="middle">실외</text>
-              <text x="315" y="128" font-size="12" fill="#90caf9" font-family="sans-serif" font-weight="bold" text-anchor="middle">-5°C</text>
+              <rect x="297" y="22" width="36" height="116" rx="6" fill="rgba(20,50,110,0.55)"/>
+              <text x="315" y="62" font-size="16" text-anchor="middle">❄️</text>
+              <text x="315" y="76" font-size="7" fill="rgba(255,255,255,0.55)" font-family="sans-serif" text-anchor="middle">실외</text>
+              <text x="315" y="114" font-size="12" fill="#90caf9" font-family="sans-serif" font-weight="bold" text-anchor="middle">-5°C</text>
               <!-- 해결 텍스트 -->
               <text x="258" y="155" font-size="9.5" fill="#52b788" font-family="sans-serif" font-weight="bold" text-anchor="middle">✓ 단계별 완화 — 결로 차단</text>
             </svg>
@@ -1595,7 +1772,7 @@
             <h3 class="benefit-title">자외선 99.99% 차단</h3>
           </div>
         </div>
-        <div class="benefit-body" style="padding:var(--sp-4);">
+        <div class="benefit-body">
           <div class="benefit-visual" style="padding-top:var(--sp-4);padding-bottom:var(--sp-3);">
             <p style="font-size:var(--fs-xs);font-weight:var(--fw-bold);color:rgba(255,255,255,0.9);text-align:center;margin-bottom:2px;">하이퍼글라스</p>
             <p style="font-size:var(--fs-xs);color:rgba(255,255,255,0.45);text-align:center;margin-bottom:var(--sp-3);">자외선 차단 투명 필름 삽입 원리</p>
@@ -1764,21 +1941,21 @@
     </div>
     <div class="cert-grid">
       <div class="cert-card">
-        <img src="이중 하이퍼글라스 열관류율.png" alt="열관류율 시험성적서" loading="lazy"/>
+        <img src="images/이중 하이퍼글라스 열관류율.png" alt="열관류율 시험성적서" loading="lazy"/>
         <div class="cert-info">
           <h4>열관류율 시험성적서</h4>
           <p>KTR 한국화학융합시험연구원 | 0.875 W/㎡·K</p>
         </div>
       </div>
       <div class="cert-card">
-        <img src="필름 성적서_1.png" alt="필름 광학특성 시험성적서" loading="lazy"/>
+        <img src="images/필름 성적서_1.png" alt="필름 광학특성 시험성적서" loading="lazy"/>
         <div class="cert-info">
           <h4>필름 광학특성 시험성적서</h4>
           <p>LX Glas 기술연구소 | 자외선 차단율 0.01%</p>
         </div>
       </div>
       <div class="cert-card">
-        <img src="내구성 테스트.png" alt="봉착 내구성 시험성적서" loading="lazy"/>
+        <img src="images/내구성 테스트.png" alt="봉착 내구성 시험성적서" loading="lazy"/>
         <div class="cert-info">
           <h4>봉착 내구성 시험성적서</h4>
           <p>KTR 한국화학융합시험연구원 | 이상없음</p>
@@ -1798,28 +1975,28 @@
     </div>
     <div class="gov-grid gov-grid-4">
       <div class="gov-card">
-        <img src="국토부선정.png" alt="국토교통과학기술진흥원 선정 공문" loading="lazy"/>
+        <img src="images/국토부선정.png" alt="국토교통과학기술진흥원 선정 공문" loading="lazy"/>
         <div class="gov-info">
           <p class="org">국토교통과학기술진흥원 (KAIA)</p>
           <h4>'24년 국토교통 기술사업화를 위한 이어달리기사업 선정</h4>
         </div>
       </div>
       <div class="gov-card">
-        <img src="중진공선정.png" alt="중진공 선정 공문" loading="lazy"/>
+        <img src="images/중진공선정.png" alt="중진공 선정 공문" loading="lazy"/>
         <div class="gov-info">
           <p class="org">중소벤처기업진흥공단 (중진공)</p>
           <h4>2025년 하반기 중소기업기술혁신개발사업(구매연계·상생협력) 선정</h4>
         </div>
       </div>
       <div class="gov-card">
-        <img src="LH선정.png" alt="LH 선정 공문" loading="lazy"/>
+        <img src="images/LH선정.png" alt="LH 선정 공문" loading="lazy"/>
         <div class="gov-info">
           <p class="org">한국토지주택공사 (LH)</p>
           <h4>2025년 중소기업 기술혁신개발 사업 심의위원회 선정</h4>
         </div>
       </div>
       <div class="gov-card">
-        <img src="서울연구원선정.png" alt="서울연구원 선정 공문" loading="lazy"/>
+        <img src="images/서울연구원선정.png" alt="서울연구원 선정 공문" loading="lazy"/>
         <div class="gov-info">
           <p class="org">서울연구원</p>
           <h4>'24년 기후변화 대응 혁신기술 실증지원사업 자유과제형 선정 (우선협상순위 1위)</h4>
@@ -1841,27 +2018,27 @@
     <h3 class="case-sub-title">시공 전·후 비교 — 마포 노인복지관</h3>
     <div class="ba-grid">
       <div class="ba-item">
-        <img src="공사전 내관 1.png" alt="시공 전 내관" loading="lazy"/>
+        <img src="images/공사전 내관 1.png" alt="시공 전 내관" loading="lazy"/>
         <span class="ba-badge before">시공 전 — 내관</span>
       </div>
       <div class="ba-item">
-        <img src="공사 후 내관1.png" alt="시공 후 내관" loading="lazy"/>
+        <img src="images/공사 후 내관1.png" alt="시공 후 내관" loading="lazy"/>
         <span class="ba-badge after">시공 후 — 내관</span>
       </div>
       <div class="ba-item">
-        <img src="공사전 내관2.png" alt="시공 전 내관 2" loading="lazy"/>
+        <img src="images/공사전 내관2.png" alt="시공 전 내관 2" loading="lazy"/>
         <span class="ba-badge before">시공 전 — 내관 2</span>
       </div>
       <div class="ba-item">
-        <img src="공사후 내관2.png" alt="시공 후 내관 2" loading="lazy"/>
+        <img src="images/공사후 내관2.png" alt="시공 후 내관 2" loading="lazy"/>
         <span class="ba-badge after">시공 후 — 내관 2</span>
       </div>
       <div class="ba-item">
-        <img src="공사전 외관.png" alt="시공 전 외관" loading="lazy"/>
+        <img src="images/공사전 외관.png" alt="시공 전 외관" loading="lazy"/>
         <span class="ba-badge before">시공 전 — 외관</span>
       </div>
       <div class="ba-item">
-        <img src="공사 후 외관.png" alt="시공 후 외관" loading="lazy"/>
+        <img src="images/공사 후 외관.png" alt="시공 후 외관" loading="lazy"/>
         <span class="ba-badge after">시공 후 — 외관</span>
       </div>
     </div>
@@ -1869,7 +2046,7 @@
     <h3 class="case-sub-title" style="margin-top:var(--sp-10);">시공 과정</h3>
     <div class="case-gallery" style="grid-template-columns:1fr;max-width:640px;margin-left:auto;margin-right:auto;">
       <div class="case-img-wrap">
-        <img src="공사 모습.jpg" alt="시공 중" loading="lazy"/>
+        <img src="images/공사 모습.jpg" alt="시공 중" loading="lazy"/>
         <div class="case-label">시공 중</div>
       </div>
     </div>
@@ -1877,7 +2054,7 @@
     <h3 class="case-sub-title" style="margin-top:var(--sp-12);">주요 레퍼런스</h3>
     <div class="ref-grid">
       <div class="ref-card">
-        <img src="레퍼런스.png" alt="시공 레퍼런스" loading="lazy"/>
+        <img src="images/레퍼런스.png" alt="시공 레퍼런스" loading="lazy"/>
         <div class="ref-info"><h5>김포 가금리 전원별장 외 다수</h5></div>
       </div>
     </div>
@@ -1898,7 +2075,7 @@
       <div class="team-card-v2">
         <div class="team-card-head-v2">
           <div class="team-photo-wrap">
-            <img src="아빠 사진.png" alt="박원근 대표" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+            <img src="images/아빠 사진.png" alt="박원근 대표" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
             <div class="team-photo-placeholder" style="display:none">박</div>
           </div>
           <div class="team-head-text">
@@ -1924,7 +2101,7 @@
       <div class="team-card-v2">
         <div class="team-card-head-v2">
           <div class="team-photo-wrap">
-            <img src="조박사님 사진.png" alt="조동우 연구소장" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+            <img src="images/조박사님 사진.png" alt="조동우 연구소장" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
             <div class="team-photo-placeholder" style="display:none">조</div>
           </div>
           <div class="team-head-text">
