@@ -383,10 +383,42 @@
       font-size: var(--fs-xs);
       font-weight: var(--fw-bold);
       letter-spacing: var(--ls-wide);
-      text-transform: uppercase;
+      margin-bottom: var(--sp-3);
+    }
+    /* 1차 뱃지 — 대한건축사협회 추천 (강조) */
+    .hero-badge-primary {
+      background: linear-gradient(135deg, rgba(201,168,76,0.18) 0%, rgba(201,168,76,0.08) 100%);
+      border: 1.5px solid rgba(201,168,76,0.55);
+      color: #e8c977;
+      padding: 0.45rem 1.1rem;
+      font-size: var(--fs-sm);
+      box-shadow: 0 4px 20px rgba(201,168,76,0.15), inset 0 1px 0 rgba(255,255,255,0.06);
+      letter-spacing: 0.01em;
+      text-transform: none;
+    }
+    .hero-badge-primary .badge-star {
+      color: #f4d03f;
+      font-size: 0.9rem;
+      filter: drop-shadow(0 0 4px rgba(244,208,63,0.5));
+    }
+    .hero-badge-primary .badge-sub {
+      color: rgba(232,201,119,0.7);
+      font-weight: var(--fw-med);
+      font-size: var(--fs-xs);
+      margin-left: 2px;
+    }
+    /* 2차 뱃지 — 정부기관 인정 (보조) */
+    .hero-badge-secondary {
+      text-transform: none;
+      letter-spacing: 0.01em;
+      font-weight: var(--fw-semi);
+      font-size: var(--fs-xs);
+      color: rgba(82,183,136,0.85);
       margin-bottom: var(--sp-5);
     }
+    .hero-badge-secondary::before { display: none; }
     .hero-badge::before { content: '●'; font-size: 0.45rem; opacity: 0.7; }
+    .hero-badge-primary::before { display: none; }
     .hero-pre {
       font-size: var(--fs-sm);
       color: var(--c-green-3);
@@ -877,6 +909,151 @@
     }
 
     /* ═══════════════════════════════════════════
+       KIRA SECTION — 대한건축사협회 건축자재추천서
+    ═══════════════════════════════════════════ */
+    .kira-section {
+      background: linear-gradient(135deg, var(--c-bg-deep) 0%, var(--c-green-1) 100%);
+      padding: var(--sp-16) 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .kira-section::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, transparent 0%, var(--c-gold) 50%, transparent 100%);
+      opacity: 0.6;
+    }
+    .kira-section::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, transparent 0%, var(--c-gold) 50%, transparent 100%);
+      opacity: 0.6;
+    }
+    .kira-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+      gap: var(--sp-12);
+      align-items: center;
+    }
+    .kira-img-wrap {
+      display: block;
+      position: relative;
+      background: #ffffff;
+      border-radius: var(--r-md);
+      overflow: hidden;
+      box-shadow: 0 16px 48px rgba(0,0,0,0.4), 0 0 0 1px rgba(201,168,76,0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: zoom-in;
+    }
+    .kira-img-wrap:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 24px 60px rgba(0,0,0,0.5), 0 0 0 2px rgba(201,168,76,0.7);
+    }
+    .kira-img-wrap img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .kira-img-overlay {
+      position: absolute;
+      bottom: var(--sp-3);
+      right: var(--sp-3);
+      background: rgba(0,0,0,0.7);
+      backdrop-filter: blur(8px);
+      color: #fff;
+      padding: 0.4rem 0.8rem;
+      border-radius: var(--r-pill);
+      font-size: var(--fs-xs);
+      font-weight: var(--fw-semi);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+    .kira-img-wrap:hover .kira-img-overlay {
+      opacity: 1;
+    }
+    .kira-zoom-icon { font-size: 0.9rem; }
+    .kira-text {
+      color: #ffffff;
+    }
+    .kira-label {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--sp-2);
+      background: linear-gradient(135deg, rgba(201,168,76,0.18) 0%, rgba(201,168,76,0.08) 100%);
+      border: 1.5px solid rgba(201,168,76,0.55);
+      color: #e8c977;
+      padding: 0.4rem 1rem;
+      border-radius: var(--r-pill);
+      font-size: var(--fs-xs);
+      font-weight: var(--fw-bold);
+      letter-spacing: 0.02em;
+      margin-bottom: var(--sp-5);
+      box-shadow: 0 4px 20px rgba(201,168,76,0.15);
+    }
+    .kira-label-star {
+      color: #f4d03f;
+      font-size: 0.95rem;
+      filter: drop-shadow(0 0 4px rgba(244,208,63,0.5));
+    }
+    .kira-title {
+      font-family: 'Noto Serif KR', serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      font-weight: var(--fw-bold);
+      color: #ffffff;
+      line-height: var(--lh-snug);
+      margin-bottom: var(--sp-5);
+    }
+    .kira-title em {
+      font-style: normal;
+      color: #e8c977;
+      text-shadow: 0 0 24px rgba(201,168,76,0.35);
+    }
+    .kira-body {
+      font-size: var(--fs-base);
+      color: rgba(255,255,255,0.78);
+      line-height: var(--lh-loose);
+      margin-bottom: var(--sp-6);
+    }
+    .kira-body strong {
+      color: #e8c977;
+      font-weight: var(--fw-bold);
+    }
+    .kira-meta {
+      display: flex;
+      flex-direction: column;
+      gap: var(--sp-3);
+      padding: var(--sp-5);
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--r-md);
+      backdrop-filter: blur(8px);
+    }
+    .kira-meta-item {
+      display: flex;
+      align-items: center;
+      gap: var(--sp-4);
+      font-size: var(--fs-sm);
+    }
+    .kira-meta-label {
+      flex-shrink: 0;
+      min-width: 96px;
+      font-size: var(--fs-xs);
+      font-weight: var(--fw-bold);
+      letter-spacing: 0.04em;
+      color: rgba(201,168,76,0.85);
+      text-transform: uppercase;
+    }
+    .kira-meta-val {
+      color: rgba(255,255,255,0.92);
+      font-weight: var(--fw-semi);
+    }
+
+    /* ═══════════════════════════════════════════
        BENEFITS (3 cards)
     ═══════════════════════════════════════════ */
     #appeal { background: var(--c-bg-alt); }
@@ -1226,6 +1403,10 @@
       .patent-block { padding: var(--sp-8) var(--sp-5); }
       .patent-grid { grid-template-columns: 1fr; gap: var(--sp-4); }
 
+      .kira-grid { grid-template-columns: 1fr; gap: var(--sp-8); }
+      .kira-img-wrap { max-width: 480px; margin: 0 auto; }
+      .kira-title { font-size: var(--fs-xl); }
+
       .benefits-grid { grid-template-columns: 1fr; }
       /* 모바일 1열에서는 그림 영역 높이 통일 불필요 — 자연 높이로 */
       .benefit-visual { min-height: 0; }
@@ -1271,6 +1452,50 @@
       .benefit-card-head { padding: var(--sp-4) var(--sp-5); }
       .benefit-num { font-size: 2.2rem; }
 
+      /* 특허 카드 — 모바일에서 가로형 컴팩트 레이아웃 (썸네일 + 정보) */
+      .patent-block { padding: var(--sp-6) var(--sp-4); margin-top: var(--sp-4); }
+      .patent-head { margin-bottom: var(--sp-5); }
+      .patent-title { font-size: var(--fs-md); }
+      .patent-grid { gap: var(--sp-3); }
+      .patent-card {
+        flex-direction: row;
+        align-items: stretch;
+      }
+      .patent-img-wrap {
+        flex-shrink: 0;
+        width: 70px;
+        padding: var(--sp-2);
+        border-right: 1px solid var(--c-border);
+        border-bottom: none;
+        display: flex;
+        align-items: center;
+      }
+      .patent-img-wrap img {
+        aspect-ratio: 1 / 1.414;
+        height: auto;
+      }
+      .patent-info {
+        padding: var(--sp-3) var(--sp-4);
+        justify-content: center;
+        gap: 4px;
+      }
+      .patent-no { font-size: 0.7rem; }
+      .patent-name { font-size: var(--fs-xs); line-height: var(--lh-snug); }
+      .patent-date { font-size: 0.7rem; }
+
+      /* KIRA 추천서 — 모바일 */
+      .kira-section { padding: var(--sp-12) 0; }
+      .kira-img-wrap { max-width: 100%; }
+      .kira-title { font-size: var(--fs-lg); }
+      .kira-body { font-size: var(--fs-sm); }
+      .kira-meta { padding: var(--sp-4); }
+      .kira-meta-item { flex-direction: column; align-items: flex-start; gap: 2px; }
+      .kira-meta-label { min-width: 0; }
+
+      /* 히어로 뱃지 — 모바일 */
+      .hero-badge-primary { font-size: var(--fs-xs); padding: 0.4rem 0.85rem; flex-wrap: wrap; justify-content: center; max-width: 100%; }
+      .hero-badge-primary .badge-sub { display: block; width: 100%; text-align: center; margin-left: 0; margin-top: 2px; }
+
       /* 표 — 모바일에서 가로 스크롤 (spec-wrap이 이미 overflow-x:auto) */
       .spec-wrap table { min-width: 560px; }
     }
@@ -1303,13 +1528,13 @@
     <img src="images/공사 후 외관.png" alt="" aria-hidden="true" />
   </div>
   <div class="hero-content">
-    <div class="hero-badge">국토부 · LH · 중진공 · 서울연구원 인정 기술력</div>
+    <div class="hero-badge hero-badge-primary">
+      <span class="badge-star">★</span>
+      대한건축사협회 추천 자재 <span class="badge-sub">(창호 부분 유일)</span>
+    </div>
+    <div class="hero-badge hero-badge-secondary">국토부 · LH · 중진공 · 서울연구원이 인정한 기술력</div>
     <p class="hero-pre">Zero Energy Building Grade 1</p>
-    <h1>제로에너지건축물<br>기준 <em>1등급 창호</em><br>하이퍼글라스</h1>
-    <p class="hero-sub">
-      열관류율 <strong>0.875 W/㎡·K</strong> — 국가 공인 ZEB 1등급 기준 충족.<br>
-      실내 시공으로 공사기간 30% 단축, 시공비 20% 절감.
-    </p>
+    <h1>제로에너지건축물용<br><em>1등급 창호</em><br>하이퍼글라스</h1>
     <div class="hero-stats">
       <div class="hero-stat">
         <span class="stat-icon">🏗️</span>
@@ -1327,6 +1552,49 @@
     <div class="hero-btns">
       <a href="https://whattime.co.kr/hipergnw" class="btn btn-primary btn-pulse" target="_blank" rel="noopener">상담 받기 →</a>
       <a href="docs/회사 소개서_하이퍼지엔더블유.pdf" class="btn btn-ghost" target="_blank" rel="noopener">📄 회사소개서 다운로드</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── 대한건축사협회 건축자재추천서 ── -->
+<section id="kira" class="kira-section">
+  <div class="container">
+    <div class="kira-grid">
+      <a href="images/대한건축사협회_건축자재추천서.jpg" target="_blank" rel="noopener" class="kira-img-wrap" aria-label="대한건축사협회 건축자재추천서 원본 보기">
+        <img src="images/대한건축사협회_건축자재추천서.jpg" alt="대한건축사협회 건축자재추천서 — 초경량 고단열 하이퍼글라스 (창호 부분 유일 추천)" loading="lazy"/>
+        <div class="kira-img-overlay">
+          <span class="kira-zoom-icon">🔍</span>
+          <span>크게 보기</span>
+        </div>
+      </a>
+      <div class="kira-text">
+        <p class="kira-label">
+          <span class="kira-label-star">★</span>
+          창호 부문 유일 추천
+        </p>
+        <h2 class="kira-title">
+          <em>대한건축사협회</em><br>
+          건축자재 공식 추천
+        </h2>
+        <p class="kira-body">
+          국가 공인 <strong>대한건축사협회(KIRA)</strong>가 <strong>창호 분야 유일하게</strong> 추천한 건축자재로
+          하이퍼글라스가 선정되었습니다. 건축 전문가 협회가 공식적으로 보증하는 검증된 기술입니다.
+        </p>
+        <div class="kira-meta">
+          <div class="kira-meta-item">
+            <span class="kira-meta-label">추천 자재명</span>
+            <span class="kira-meta-val">초경량 고단열 하이퍼글라스</span>
+          </div>
+          <div class="kira-meta-item">
+            <span class="kira-meta-label">추천 번호</span>
+            <span class="kira-meta-val">2026-추천-24</span>
+          </div>
+          <div class="kira-meta-item">
+            <span class="kira-meta-label">유효기간</span>
+            <span class="kira-meta-val">2026.05.07 ~ 2029.05.06</span>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
