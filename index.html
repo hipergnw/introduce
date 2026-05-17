@@ -4,6 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <!-- ══════════════ 검색엔진 사이트 인증 ══════════════ -->
+  <meta name="google-site-verification" content="sIdLviF-lgqDPuHWuwrvEsxrv6Y_9wN7CtVUr08hhRk" />
+  <!-- 네이버 인증은 발급 후 아래 형식으로 추가:
+       <meta name="naver-site-verification" content="여기에_네이버에서_받은_인증코드" /> -->
+
   <!-- ══════════════ SEO — 기본 메타 ══════════════ -->
   <title>하이퍼글라스 | ZEB 1등급 창호 · 대한건축사협회 추천 자재 · 하이퍼지엔더블유</title>
   <meta name="description" content="하이퍼글라스는 대한건축사협회가 창호 부문 유일 추천한 ZEB 제로에너지건축물 1등급 창호입니다. 열관류율 0.875 W/㎡·K, 실내 시공으로 시공기간 30% 단축·시공비 20% 절감, 난방비 30%·냉방비 15% 절감, 결로 최소화, 자외선 99.99% 차단. 국토부·LH·중진공·서울연구원이 검증한 특허 3건 보유 기술입니다." />
@@ -612,6 +617,7 @@
       box-shadow: 0 4px 20px rgba(201,168,76,0.15), inset 0 1px 0 rgba(255,255,255,0.06);
       letter-spacing: 0.01em;
       text-transform: none;
+      margin-bottom: var(--sp-4);
     }
     .hero-badge-primary .badge-star {
       color: #f4d03f;
@@ -634,7 +640,7 @@
       color: rgba(255,255,255,0.95);
       background: rgba(255,255,255,0.08);
       border-color: rgba(255,255,255,0.2);
-      margin-bottom: var(--sp-5);
+      margin-bottom: var(--sp-10);
       text-shadow: 0 1px 4px rgba(0,0,0,0.5);
     }
     .hero-badge-secondary::before { display: none; }
@@ -656,7 +662,7 @@
       color: var(--c-text-inv);
       line-height: var(--lh-tight);
       letter-spacing: var(--ls-tight);
-      margin-bottom: var(--sp-5);
+      margin-bottom: var(--sp-10);
       text-shadow: 0 2px 24px rgba(0,0,0,0.6), 0 1px 2px rgba(0,0,0,0.4);
     }
     .hero h1 em {
@@ -941,9 +947,10 @@
     /* 상단 — 3중 / 4중 유리 이미지 비교 */
     .principle-imgs-title {
       font-family: 'Noto Serif KR', serif;
-      font-size: var(--fs-lg);
+      font-size: var(--fs-xl);
       font-weight: var(--fw-bold);
       color: var(--c-text-1);
+      line-height: var(--lh-snug);
       text-align: center;
       margin-bottom: var(--sp-6);
     }
@@ -1381,6 +1388,7 @@
     }
     .benefit-visual .chart-row .chart-labels .name { color: rgba(255,255,255,0.9); }
     .benefit-visual .chart-row .chart-labels .val  { color: rgba(255,255,255,0.55); }
+    .benefit-visual .chart-row .chart-labels .bad-val { color: #ff6b6b; font-weight: var(--fw-bold); }
     .benefit-visual .chart-row .bar-track { background: rgba(255,255,255,0.12); }
 
     /* Chart */
@@ -1388,9 +1396,11 @@
     .chart-labels { display: flex; justify-content: space-between; font-size: var(--fs-xs); margin-bottom: 4px; }
     .chart-labels .name { font-weight: var(--fw-semi); color: var(--c-text-2); }
     .chart-labels .val  { color: var(--c-text-3); }
+    .chart-labels .bad-val { color: #ff6b6b; font-weight: var(--fw-bold); }
     .bar-track { background: var(--c-border); border-radius: var(--r-sm); height: 7px; overflow: hidden; }
     .bar-fill  { height: 100%; border-radius: var(--r-sm); background: var(--c-green-2); }
-    .bar-fill.hi { background: var(--c-green-3); }
+    .bar-fill.hi  { background: var(--c-green-3); }
+    .bar-fill.bad { background: linear-gradient(90deg, #e53935 0%, #ff6b6b 100%); }
 
     /* UV layer visual */
     .uv-visual {
@@ -1456,6 +1466,16 @@
       background: var(--c-bg); border-radius: var(--r-lg);
       overflow: hidden; border: 1px solid var(--c-border);
       box-shadow: var(--sh-sm);
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      cursor: zoom-in;
+      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    .cert-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--c-green-3);
+      box-shadow: var(--sh-md);
     }
     .cert-card img { width: 100%; height: auto; aspect-ratio: 3/4; object-fit: cover; object-position: top; display: block; }
     .cert-info { padding: var(--sp-5); }
@@ -1668,6 +1688,7 @@
       .principle-block { padding: var(--sp-8) var(--sp-5); }
       .principle-img-wrap img { max-height: 240px; }
       .principle-title { font-size: var(--fs-lg); }
+      .principle-imgs-title { font-size: var(--fs-lg); }
       .principle-kpis { grid-template-columns: repeat(3, 1fr); gap: var(--sp-2); }
       .principle-kpi { padding: var(--sp-3) var(--sp-2); }
       .principle-kpi-val { font-size: 1rem; }
@@ -1712,6 +1733,7 @@
       /* 원리 설명 — 모바일에서 KPI 2열로, 마지막 항목 가로 전체 */
       .principle-block { padding: var(--sp-6) var(--sp-4); }
       .principle-title { font-size: var(--fs-md); }
+      .principle-imgs-title { font-size: var(--fs-md); }
       .principle-body { font-size: var(--fs-sm); }
       .principle-img-wrap img { max-height: 200px; }
       .principle-kpis { grid-template-columns: 1fr 1fr; }
@@ -1763,9 +1785,10 @@
       .kira-meta-label { min-width: 0; }
 
       /* 히어로 뱃지 — 모바일 */
-      .hero-badge-primary { font-size: var(--fs-sm); padding: 0.5rem 1rem; flex-wrap: wrap; justify-content: center; max-width: 100%; }
+      .hero-badge-primary { font-size: var(--fs-sm); padding: 0.5rem 1rem; flex-wrap: wrap; justify-content: center; max-width: 100%; margin-bottom: var(--sp-3); }
       .hero-badge-primary .badge-sub { display: block; width: 100%; text-align: center; margin-left: 0; margin-top: 2px; font-size: var(--fs-xs); }
-      .hero-badge-secondary { font-size: var(--fs-sm); padding: 0.4rem 1rem; }
+      .hero-badge-secondary { font-size: var(--fs-sm); padding: 0.4rem 1rem; margin-bottom: var(--sp-8); }
+      .hero h1 { margin-bottom: var(--sp-8); }
 
       /* 표 — 모바일에서 가로 스크롤 (spec-wrap이 이미 overflow-x:auto) */
       .spec-wrap table { min-width: 560px; }
@@ -1808,7 +1831,7 @@
       background: transparent;
       padding: 0;
       box-shadow: none;
-      max-width: 1100px;
+      max-width: 1000px;
       width: auto;
     }
     .lightbox-content svg { width: 100%; height: auto; max-height: 70vh; display: block; }
@@ -1817,7 +1840,7 @@
       width: auto;
       max-width: 100%;
       height: auto;
-      max-height: 88vh;
+      max-height: 82vh;
       object-fit: contain;
       border-radius: var(--r-md);
       box-shadow: 0 24px 80px rgba(0,0,0,0.5);
@@ -1841,14 +1864,22 @@
       z-index: 10;
     }
     .lightbox-close:hover { background: rgba(0,0,0,0.85); }
-    /* 이미지 모드에서는 닫기 버튼을 박스 바깥쪽으로 */
+    /* 이미지 모드 — X 버튼을 이미지 안쪽 우상단에 (잘림 방지) */
     .lightbox-content:has(.lightbox-image) .lightbox-close {
-      top: -16px; right: -16px;
-      background: #fff;
-      color: #111;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      top: 12px;
+      right: 12px;
+      width: 40px;
+      height: 40px;
+      background: rgba(0,0,0,0.75);
+      color: #fff;
+      font-size: 1.3rem;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
     }
-    .lightbox-content:has(.lightbox-image) .lightbox-close:hover { background: #f0f0f0; }
+    .lightbox-content:has(.lightbox-image) .lightbox-close:hover {
+      background: rgba(0,0,0,0.95);
+    }
     @media (max-width: 600px) {
       .lightbox { padding: var(--sp-3); }
       .lightbox-content { padding: var(--sp-5); }
@@ -2245,7 +2276,7 @@
           <div class="benefit-num">01</div>
           <div>
             <p class="benefit-tag">Energy Saving</p>
-            <h3 class="benefit-title">난방비 30% · 냉방비 15% 절감</h3>
+            <h3 class="benefit-title">난방·냉방비 30·15% 절감</h3>
           </div>
         </div>
         <div class="benefit-body">
@@ -2256,8 +2287,8 @@
               <div class="bar-track"><div class="bar-fill" style="width:14%"></div></div>
             </div>
             <div class="chart-row">
-              <div class="chart-labels"><span class="name">복층유리</span><span class="val">1.4+</span></div>
-              <div class="bar-track"><div class="bar-fill" style="width:100%"></div></div>
+              <div class="chart-labels"><span class="name">복층유리</span><span class="val bad-val">1.4+</span></div>
+              <div class="bar-track"><div class="bar-fill bad" style="width:100%"></div></div>
             </div>
             <div class="chart-row">
               <div class="chart-labels"><span class="name">삼중유리</span><span class="val">0.9</span></div>
@@ -2284,7 +2315,7 @@
         <div class="benefit-card-head">
           <div class="benefit-num">02</div>
           <div>
-            <p class="benefit-tag">Condensation Free</p>
+            <p class="benefit-tag">Anti-Condensation</p>
             <h3 class="benefit-title">결로 방지</h3>
           </div>
         </div>
@@ -2539,27 +2570,27 @@
       <p class="section-desc">모든 수치는 국가 공인기관의 시험성적서로 증명됩니다.</p>
     </div>
     <div class="cert-grid">
-      <div class="cert-card">
+      <a class="cert-card" href="images/이중 하이퍼글라스 열관류율.png" target="_blank" rel="noopener">
         <img src="images/이중 하이퍼글라스 열관류율.png" alt="열관류율 시험성적서" loading="lazy"/>
         <div class="cert-info">
           <h4>열관류율 시험성적서</h4>
           <p>KTR 한국화학융합시험연구원 | 0.875 W/㎡·K</p>
         </div>
-      </div>
-      <div class="cert-card">
+      </a>
+      <a class="cert-card" href="images/필름 성적서_1.png" target="_blank" rel="noopener">
         <img src="images/필름 성적서_1.png" alt="필름 광학특성 시험성적서" loading="lazy"/>
         <div class="cert-info">
           <h4>필름 광학특성 시험성적서</h4>
           <p>LX Glas 기술연구소 | 자외선 차단율 0.01%</p>
         </div>
-      </div>
-      <div class="cert-card">
+      </a>
+      <a class="cert-card" href="images/내구성 테스트.png" target="_blank" rel="noopener">
         <img src="images/내구성 테스트.png" alt="봉착 내구성 시험성적서" loading="lazy"/>
         <div class="cert-info">
           <h4>봉착 내구성 시험성적서</h4>
           <p>KTR 한국화학융합시험연구원 | 이상없음</p>
         </div>
-      </div>
+      </a>
     </div>
   </div>
 </section>
@@ -2818,13 +2849,14 @@
     });
   });
 
-  // 이미지 링크(특허증/정부 R&D/KIRA/유리 구조) 라이트박스
+  // 이미지 링크(특허증/정부 R&D/KIRA/유리 구조/성능 인증서) 라이트박스
   // a 태그 내부에 <img>가 있고 href가 같은 이미지일 때 가로채서 라이트박스로
   const imgLinkSelectors = [
     '.patent-card',
     '.gov-card',
     '.kira-img-wrap',
-    '.principle-img-wrap'
+    '.principle-img-wrap',
+    '.cert-card'
   ];
   document.querySelectorAll(imgLinkSelectors.join(', ')).forEach(link => {
     if (link.tagName !== 'A') return;
