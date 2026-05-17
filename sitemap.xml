@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://hipergnw.github.io/introduce/</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://hipergnw.github.io/introduce/og-image.png</image:loc>
+      <image:title>하이퍼글라스 — ZEB 1등급 창호</image:title>
+      <image:caption>대한건축사협회 추천 자재, 제로에너지건축물 1등급 창호</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hipergnw.github.io/introduce/images/대한건축사협회 건축자재추천서.png</image:loc>
+      <image:title>대한건축사협회 건축자재추천서 (창호 부문 유일)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://hipergnw.github.io/introduce/images/특허증_1.jpg</image:loc>
+      <image:title>특허 제 10-2653747호 — 복층 유리 제조 방법 및 이를 포함하는 복층 유리 창호 시스템</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://hipergnw.github.io/introduce/images/특허증_2.jpg</image:loc>
+      <image:title>특허 제 10-2622381호 — 복층 유리 제조 방법 및 이를 통해 제조된 복층 유리</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://hipergnw.github.io/introduce/images/특허증_3.jpg</image:loc>
+      <image:title>특허 제 10-2635235호 — 복합 시스템 창호</image:title>
+    </image:image>
+  </url>
+</urlset>
