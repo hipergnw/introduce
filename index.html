@@ -1634,7 +1634,8 @@
       font-size: var(--fs-xs); font-weight: var(--fw-semi);
     }
     .ref-grid { display: grid; grid-template-columns: 1fr; gap: var(--sp-4); }
-    .ref-card { border-radius: var(--r-md); overflow: hidden; background: var(--c-bg-alt); border: 1px solid var(--c-border); }
+    .ref-card { border-radius: var(--r-md); overflow: hidden; background: var(--c-bg-alt); border: 1px solid var(--c-border); display: block; text-decoration: none; color: inherit; cursor: zoom-in; transition: box-shadow 0.2s ease, transform 0.2s ease; }
+    .ref-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.15); transform: translateY(-2px); }
     .ref-card img { width: 100%; height: auto; object-fit: contain; display: block; background: #f4f8f5; }
     .ref-info { padding: var(--sp-3) var(--sp-4); }
     .ref-info h5 { font-size: var(--fs-sm); font-weight: var(--fw-bold); color: var(--c-text-1); }
@@ -1795,9 +1796,24 @@
       .kira-meta-label { min-width: 0; }
 
       /* 히어로 뱃지 — 모바일 */
-      .hero-badge-primary { font-size: var(--fs-sm); padding: 0.5rem 1rem; flex-wrap: wrap; justify-content: center; max-width: 100%; margin-bottom: var(--sp-3); }
-      .hero-badge-primary .badge-sub { display: block; width: 100%; text-align: center; margin-left: 0; margin-top: 2px; font-size: var(--fs-xs); }
+      .hero-badge-primary { font-size: var(--fs-sm); padding: 0.5rem 1rem; flex-wrap: wrap; justify-content: center; max-width: 100%; margin-bottom: var(--sp-3); line-height: 1.3; }
+      .hero-badge-primary .badge-sub { display: block; width: 100%; text-align: center; margin-left: 0; margin-top: -1px; font-size: var(--fs-sm); }
       .hero-badge-secondary { font-size: var(--fs-sm); padding: 0.4rem 1rem; margin-bottom: var(--sp-8); }
+
+      /* 절감액 헤드라인 — 모바일에서 한 줄로 표시 */
+      .savings-headline { font-size: 2.2rem !important; }
+      .savings-headline .savings-unit { font-size: 0.85rem !important; margin-left: 6px !important; }
+
+      /* 비용 결과 — 모바일에서 한 줄 표시 */
+      .cost-result {
+        display: flex;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+        font-size: var(--fs-sm);
+        padding: var(--sp-3) var(--sp-4);
+        gap: var(--sp-2);
+        max-width: 100%;
+      }
       .hero h1 { margin-bottom: var(--sp-10); }
       .hero-stats { margin-bottom: var(--sp-10); }
 
@@ -1857,9 +1873,12 @@
       box-shadow: 0 24px 80px rgba(0,0,0,0.5);
       background: #fff;
     }
-    .lightbox-content .visual-title { font-size: var(--fs-md); margin-bottom: var(--sp-5); }
+    .lightbox-content .visual-title { font-size: var(--fs-md); margin-bottom: var(--sp-5); color: rgba(255,255,255,0.6); text-align: center; font-weight: var(--fw-bold); letter-spacing: 0.05em; }
     .lightbox-content .chart-row { margin-bottom: var(--sp-4); }
-    .lightbox-content .bar-track { height: 12px; }
+    .lightbox-content .bar-track { height: 12px; background: rgba(255,255,255,0.12); }
+    .lightbox-content .chart-labels .name { color: rgba(255,255,255,0.9); }
+    .lightbox-content .chart-labels .val { color: rgba(255,255,255,0.55); }
+    .lightbox-content .chart-labels .bad-val { color: #ff6b6b; font-weight: var(--fw-bold); }
     .lightbox-close {
       position: absolute;
       top: var(--sp-3); right: var(--sp-3);
@@ -2110,7 +2129,7 @@
       <!-- 절감액 임팩트 강조 -->
       <div style="background:var(--c-green-1);border-radius:var(--r-lg);padding:var(--sp-6) var(--sp-8);margin-bottom:var(--sp-6);text-align:center;">
         <p style="font-size:var(--fs-xs);color:rgba(255,255,255,0.45);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:var(--sp-2);">10㎡당 절감액</p>
-        <p style="font-family:'Noto Serif KR',serif;font-size:3rem;font-weight:700;color:var(--c-green-3);line-height:1;margin-bottom:var(--sp-2);">915,000원<span style="font-size:1rem;color:rgba(255,255,255,0.4);font-family:'Noto Sans KR',sans-serif;font-weight:400;margin-left:8px;">/ 10㎡</span></p>
+        <p class="savings-headline" style="font-family:'Noto Serif KR',serif;font-size:3rem;font-weight:700;color:var(--c-green-3);line-height:1;margin-bottom:var(--sp-2);white-space:nowrap;">915,000원<span class="savings-unit" style="font-size:1rem;color:rgba(255,255,255,0.4);font-family:'Noto Sans KR',sans-serif;font-weight:400;margin-left:8px;">/ 10㎡</span></p>
         <p style="font-size:var(--fs-sm);color:rgba(255,255,255,0.45);">100㎡ 시공 시 약 <strong style="color:var(--c-green-4);">915만원</strong> · 1,000㎡ 시공 시 약 <strong style="color:var(--c-green-4);">9,150만원</strong> 절감</p>
       </div>
 
@@ -2686,10 +2705,10 @@
 
     <h3 class="case-sub-title" style="margin-top:var(--sp-12);">주요 레퍼런스</h3>
     <div class="ref-grid">
-      <div class="ref-card">
+      <a href="images/레퍼런스.png" target="_blank" rel="noopener" class="ref-card" aria-label="시공 레퍼런스 원본 보기">
         <img src="images/레퍼런스.png" alt="시공 레퍼런스" loading="lazy"/>
         <div class="ref-info"><h5>김포 가금리 전원별장 외 다수</h5></div>
-      </div>
+      </a>
     </div>
   </div>
 </section>
@@ -2763,7 +2782,7 @@
 <div class="cta-section">
   <div class="container">
     <h2>지금 바로 하이퍼글라스를<br>도입해 보세요</h2>
-    <p>냉난방비 절감 · 결로 방지 · 자외선 차단 — 하나로 해결합니다.<br>전문가가 현장을 분석하고 최적의 솔루션을 제안드립니다.</p>
+    <p>냉난방비 절감 · 결로 방지 · 자외선 차단<br>— 하나로 해결합니다.<br>전문가가 현장을 분석하고 최적의 솔루션을 제안드립니다.</p>
     <div style="display:flex;flex-direction:column;align-items:center;gap:var(--sp-4);">
       <a href="https://whattime.co.kr/hipergnw" class="btn btn-primary btn-pulse" target="_blank" rel="noopener" style="font-size:1.05rem;padding:0.9rem 2.5rem;">상담 받기 →</a>
       <a href="docs/회사 소개서_하이퍼지엔더블유.pdf" target="_blank" rel="noopener"
@@ -2852,14 +2871,15 @@
     });
   });
 
-  // 이미지 링크(특허증/정부 R&D/KIRA/유리 구조/성능 인증서) 라이트박스
+  // 이미지 링크(특허증/정부 R&D/KIRA/유리 구조/성능 인증서/레퍼런스) 라이트박스
   // a 태그 내부에 <img>가 있고 href가 같은 이미지일 때 가로채서 라이트박스로
   const imgLinkSelectors = [
     '.patent-card',
     '.gov-card',
     '.kira-img-wrap',
     '.principle-img-wrap',
-    '.cert-card'
+    '.cert-card',
+    '.ref-card'
   ];
   document.querySelectorAll(imgLinkSelectors.join(', ')).forEach(link => {
     if (link.tagName !== 'A') return;
